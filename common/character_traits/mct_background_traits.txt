@@ -46,20 +46,24 @@ academic = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_intelligentsia
+			limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_intelligentsia
+                    }
                 }
 			}
 			add = 90
 		}
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_landowners
-                    is_interest_group_type = ig_devout
-                    is_interest_group_type = ig_petty_bourgeoisie 
-			    }  
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_landowners
+                        is_interest_group_type = ig_devout
+                        is_interest_group_type = ig_petty_bourgeoisie 
+                    }  
+                }
             } 
 			add = 30
 		}
@@ -128,9 +132,11 @@ banker = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_industrialists
+            limit = {
+			    interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_industrialists
+                    }
                 }
 			}
 			add = 90
@@ -194,22 +200,29 @@ bureaucrat = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_armed_forces
-                    is_interest_group_type = ig_intelligentsia
-                    is_interest_group_type = ig_petty_bourgeoisie
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_armed_forces
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_petty_bourgeoisie
+                    }
                 }
 			}
 			add = 30
 		}
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_landowners
+            limit = {
+                AND = {
+                    interest_group = {
+                        OR = {
+                            is_interest_group_type = ig_landowners
+                        }
+                    }
+                    owner = { has_law = law_type:law_hereditary_bureaucrats }
                 }
 			}
-            owner = { has_law = law_type:law_hereditary_bureaucrats }
+            
 			add = 30
 		}
 	}
@@ -275,20 +288,25 @@ clerk = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_petty_bourgeoisie
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_petty_bourgeoisie
+                    }
+                }
 			}
 			add = 60
 		}
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_devout
-                    is_interest_group_type = ig_intelligentsia
-                    is_interest_group_type = ig_trade_unions
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_devout
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_trade_unions
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -344,15 +362,17 @@ doctor = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_devout
-                    is_interest_group_type = ig_rural_folk
-                    is_interest_group_type = ig_intelligentsia
-                    is_interest_group_type = ig_petty_bourgeoisie
-                    is_interest_group_type = ig_trade_unions
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_devout
+                        is_interest_group_type = ig_rural_folk
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_petty_bourgeoisie
+                        is_interest_group_type = ig_trade_unions
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -413,13 +433,15 @@ engineer = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_intelligentsia
-                    is_interest_group_type = ig_industrialists
-                    is_interest_group_type = ig_trade_unions
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_industrialists
+                        is_interest_group_type = ig_trade_unions
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -479,19 +501,23 @@ entrepreneur = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_industrialists
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_industrialists
+                    }
                 }
-			}
+            }
 			add = 60
 		}
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_petty_bourgeoisie
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_petty_bourgeoisie
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -559,11 +585,13 @@ mill_owner = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_industrialists
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_industrialists
+                    }
                 }
-			}
+            }
 			add = 90
 		}
 	}
@@ -619,21 +647,25 @@ farmer = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_rural_folk
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_rural_folk
+                    }
                 }
-			}
+            }
 			add = 60
 		}
         if = {
-			interest_group = {
-                is_interest_group_type = ig_landowners
-			}
-            OR = {
-                owner = { has_law = law_type:law_anarchy }
-                owner = { has_law = law_type:law_command_economy }
-                owner = { has_law = law_type:law_council_republic }
+            limit = {
+                interest_group = {
+                    is_interest_group_type = ig_landowners
+                }
+                OR = {
+                    owner = { has_law = law_type:law_anarchy }
+                    owner = { has_law = law_type:law_command_economy }
+                    owner = { has_law = law_type:law_council_republic }
+                }
             }
 			add = 30
 		}
@@ -666,10 +698,10 @@ journalist = {
 
 	possible = {
         has_role = politician
-        }
         NOT = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
+        }
         NOT = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
@@ -696,14 +728,16 @@ journalist = {
 	weight = {
 		value = 0
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_rural_folk
-                    is_interest_group_type = ig_armed_forces
-                    is_interest_group_type = ig_industrialists
-                    is_interest_group_type = ig_trade_unions
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_rural_folk
+                        is_interest_group_type = ig_armed_forces
+                        is_interest_group_type = ig_industrialists
+                        is_interest_group_type = ig_trade_unions
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -768,19 +802,23 @@ labourer = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_trade_unions
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_trade_unions
+                    }
                 }
-			}
+            }
 			add = 60
 		}
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_devout
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_devout
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -829,32 +867,38 @@ lawyer = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_rural_folk
-                    is_interest_group_type = ig_petty_bourgeoisie
-                    is_interest_group_type = ig_trade_unions
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_rural_folk
+                        is_interest_group_type = ig_petty_bourgeoisie
+                        is_interest_group_type = ig_trade_unions
+                    }
                 }
-			}
+            }
 			add = 90
 		}
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_landowners
-                    is_interest_group_type = ig_devout
-                    is_interest_group_type = ig_intelligentsia
-                    is_interest_group_type = ig_industrialists
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_landowners
+                        is_interest_group_type = ig_devout
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_industrialists
+                    }
                 }
-			}
+            }
 			add = 60
 		}
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_armed_forces
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_armed_forces
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -916,20 +960,24 @@ merchant = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_petty_bourgeoisie
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_petty_bourgeoisie
+                    }
                 }
-			}
+            }
 			add = 60
 		}
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_intelligentsia
-                    is_interest_group_type = ig_industrialists
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_intelligentsia
+                        is_interest_group_type = ig_industrialists
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -985,19 +1033,23 @@ military_officer = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_armed_forces
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_armed_forces
+                    }
                 }
-			}
+            }
 			add = 90
 		}
 		if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_landowners
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_landowners
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -1046,11 +1098,13 @@ landed_elite = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_landowners
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_landowners
+                    }
                 }
-			}
+            }
 			add = 90
 		}
 	}
@@ -1117,12 +1171,14 @@ police_chief = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_rural_folk
-                    is_interest_group_type = ig_armed_forces
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_rural_folk
+                        is_interest_group_type = ig_armed_forces
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -1145,7 +1201,7 @@ political_dynasty = {
 	}
 
 	country_modifier = {
-        country_influence_mult - 0.05
+        country_influence_mult = 0.05
         country_opposition_ig_approval_add = -1
 	}
 
@@ -1186,19 +1242,23 @@ political_dynasty = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_landowners
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_landowners
+                    }
                 }
-			}
+            }
 			add = 90
 		}
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_armed_forces
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_armed_forces
+                    }
                 }
-			}
+            }
 			add = 60
 		}
 	}
@@ -1251,23 +1311,29 @@ religious_leader = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_devout
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_devout
+                    }
                 }
-			}
+            }
 			add = 90
 		}
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_rural_folk
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_rural_folk
+                    }
                 }
-			}
+            }
 			add = 60
 		}
         if = {
-            owner = { has_law = law_type:law_theocracy }
+            limit = {
+                owner = { has_law = law_type:law_theocracy }
+            }
             add = 10
         }
 	}
@@ -1334,11 +1400,13 @@ soldier = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_armed_forces
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_armed_forces
+                    }
                 }
-			}
+            }
 			add = 60
 		}
 	}
@@ -1406,13 +1474,15 @@ teacher = {
 	weight = {
 		value = 0
         if = {
-			interest_group = {
-                OR = {
-                    is_interest_group_type = ig_devout
-                    is_interest_group_type = ig_rural_folk
-                    is_interest_group_type = ig_trade_unions
+            limit = {
+                interest_group = {
+                    OR = {
+                        is_interest_group_type = ig_devout
+                        is_interest_group_type = ig_rural_folk
+                        is_interest_group_type = ig_trade_unions
+                    }
                 }
-			}
+            }
 			add = 30
 		}
 	}
@@ -1449,7 +1519,9 @@ good_education = {
 	weight = {
 		value = 10
         if = { 
-            has_variable = david_copperfield_var 
+            limit = {
+                has_variable = david_copperfield_var 
+            }
             multiply = 10
         }
 	}

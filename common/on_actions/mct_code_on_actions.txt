@@ -1,0 +1,13 @@
+﻿on_character_creation = {
+    effect = {
+		# if = {
+		# 	limit = {
+		# 		NOT = { has_variable = has_background_trait }
+		# 	}
+		# 	set_variable = has_background_trait
+		# }
+		set_variable = has_background_trait
+		add_random_trait = skill
+		remove_variable = has_background_trait
+	}
+}

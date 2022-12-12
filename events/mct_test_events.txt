@@ -1,0 +1,25 @@
+﻿namespace = mct_test_events
+
+mct_test_events.1 = { 	#Kill a random character
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		any_scope_character = {
+			has_role = politician
+		}	
+		
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_role = politician	
+			}
+			save_scope_as = kill_the_politician
+		}
+
+	scope:kill_the_politician = { kill_character = yes }
+	debug_log = "MCT: Killed a Politician"
+	}
+} 

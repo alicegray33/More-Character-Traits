@@ -1,0 +1,5 @@
+﻿on_character_creation = {
+    events = {
+		mct_add_background_traits.1
+	}
+}

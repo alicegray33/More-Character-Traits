@@ -1,0 +1,252 @@
+﻿on_character_creation = {
+    effect = {
+        if = {
+            limit = { 
+                AND = {
+                    interest_group = { is_interest_group_type = ig_landowners }
+                    has_role = politician
+                }
+            }
+            random_list = {
+				10 = { # Academic
+                    modifier = {
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_variable = has_historical_traits
+                                    NOT = {
+                                        is_ruler = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        is_heir = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        owner = { has_technology_researched = academia }
+                                    }
+                                }
+                            }                            
+                        add = -10
+                        }
+                    }
+                    add_trait = academic
+                }
+                10 = { # bureaucrat 
+                    modifier = {
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_variable = has_historical_traits
+                                    NOT = {
+                                        is_ruler = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        is_heir = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        is_ruler = yes
+                                        owner = { has_law = law_type:law_theocracy }
+                                    }
+                                    NOT = {
+                                        is_heir = yes
+                                        owner = { has_law = law_type:law_theocracy }
+                                    }
+                                    NOT = {
+                                        owner = { has_technology_researched = academia }
+                                    }
+                                    NOT = {
+                                        owner = { has_law = law_type:law_hereditary_bureaucrats }
+                                    }
+                                }
+                            }                            
+                        add = -10
+                        }
+                    }
+                    add_trait = bureaucrat
+                }
+                10 = { # farmer 
+                    modifier = {
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_variable = has_historical_traits
+                                    NOT = {
+                                        is_ruler = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        is_heir = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        owner = { has_technology_researched = academia }
+                                    }
+                                    NOT = {
+                                        AND = {
+                                            owner = { has_technology_researched = socialism }
+                                            owner = { literacy_rate >= 0.60 }    
+                                            NOR = {
+                                                owner = { has_law = law_type:law_anarchy }
+                                                owner = { has_law = law_type:law_command_economy }
+                                                owner = { has_law = law_type:law_council_republic }
+                                            }
+                                        }
+                                    }
+                                }
+                            }                            
+                        add = -10
+                        }
+                    }
+                    add_trait = farmer
+                }
+                20 = { # lawyer
+                    modifier = {
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_variable = has_historical_traits
+                                    NOT = {
+                                        is_ruler = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        is_heir = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        owner = { has_law = law_type:law_anarchy }
+                                    }
+                                }
+                            }                            
+                        add = -20
+                        }
+                    }
+                    add_trait = lawyer
+                }
+                10 = { # military_officer 
+                    modifier = {
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_variable = has_historical_traits
+                                    NOT = {
+                                        is_ruler = yes
+                                        owner = { has_law = law_type:law_theocracy }
+                                    }
+                                    NOT = {
+                                        is_heir = yes
+                                        owner = { has_law = law_type:law_theocracy }
+                                    }
+                                    NOT = {
+                                        owner = { has_technology_researched = standing_army }
+                                    }
+                                }
+                            }                            
+                        add = -10
+                        }
+                    }
+                    add_trait = military_officer
+                }
+                30 = { # landed_elite 
+                    modifier = {
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_variable = has_historical_traits
+                                    owner = { has_law = law_type:law_council_republic }
+                                    owner = { has_law = law_type:law_command_economy }
+                                }
+                            }                            
+                        add = -30
+                        }
+                    }
+                    add_trait = landed_elite
+                }
+                30 = { # political dynasty 
+                    modifier = {
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_variable = has_historical_traits
+                                    NOT = {
+                                        is_ruler = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        is_heir = yes
+                                        owner = { has_law = law_type:law_monarchy }
+                                    }
+                                    NOT = {
+                                        is_ruler = yes
+                                        owner = { has_law = law_type:law_theocracy }
+                                    }
+                                    NOT = {
+                                        is_heir = yes
+                                        owner = { has_law = law_type:law_theocracy }
+                                    }
+                                    NOT = {
+                                        owner = { has_law = law_type:law_anarchy }
+                                    }
+                                }
+                            }                            
+                        add = -30
+                        }
+                    }
+                    add_trait = political_dynasty
+                }
+                5 = { # well_educated 
+                    add_trait = good_education
+                }
+            }
+        }
+        else_if = {
+            limit = { 
+                AND = {
+                    interest_group = { is_interest_group_type = ig_rural_folk }
+                    has_role = politician
+                }
+            }
+            random_list = {
+				10 = { # Academic
+                    add_trait = academic
+                    debug_log = "MCT: Rural folk trait added"
+                }
+                10 = { # Clerk 
+                    add_trait = clerk
+                    debug_log = "MCT: Rural folk trait added"
+                }
+                10 = { # Doctor
+                    add_trait = doctor
+                    debug_log = "MCT: Rural folk trait added"
+                }
+                10 = { # Labourer
+                    add_trait = labourer
+                    debug_log = "MCT: Rural folk trait added"
+                }
+                20 = { # Lawyer
+                    add_trait = lawyer
+                    debug_log = "MCT: Rural folk trait added"
+                }
+                10 = { # Religious Leader
+                    add_trait = religious_leader
+                    debug_log = "MCT: Rural folk trait added"
+                }
+                10 = { # Teacher
+                    add_trait = teacher
+                    debug_log = "MCT: Rural folk trait added"
+                }
+                1 = { # Good Education
+                    add_trait = good_education
+                    debug_log = "MCT: Rural folk trait added"
+                }
+            }
+        }
+        else = {
+            debug_log = "MCT: Character Creation triggered but no trait added"
+        }
+    }
+
+}

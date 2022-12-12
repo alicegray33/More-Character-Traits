@@ -20,59 +20,8 @@ academic = {
 	}
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        interest_group = {
-			OR = {
-				is_interest_group_type = ig_landowners
-                is_interest_group_type = ig_devout
-				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_petty_bourgeoisie 
-			}
-		}
-        owner = {
-            has_technology_researched = academia
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-			limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_intelligentsia
-                    }
-                }
-			}
-			add = 90
-		}
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                        is_interest_group_type = ig_devout
-                        is_interest_group_type = ig_petty_bourgeoisie 
-                    }  
-                }
-            } 
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 banker = {
@@ -95,58 +44,8 @@ banker = {
 	}
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_council_republic }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_command_economy }
-        }
-        interest_group = {
-			OR = {
-				is_interest_group_type = ig_industrialists
-			}
-		}
-        owner = {
-            has_technology_researched = banking
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-            limit = {
-			    interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_industrialists
-                    }
-                }
-			}
-			add = 90
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 bureaucrat = {
@@ -169,68 +68,8 @@ bureaucrat = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        interest_group = {
-			OR = {
-				is_interest_group_type = ig_landowners
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_petty_bourgeoisie
-			}
-		}
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                        is_interest_group_type = ig_intelligentsia
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
-                }
-			}
-			add = 30
-		}
-        if = {
-            limit = {
-                AND = {
-                    interest_group = {
-                        OR = {
-                            is_interest_group_type = ig_landowners
-                        }
-                    }
-                    owner = { has_law = law_type:law_hereditary_bureaucrats }
-                }
-			}
-            
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 clerk = {
@@ -253,68 +92,8 @@ clerk = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        interest_group = {
-			OR = {
-				is_interest_group_type = ig_devout
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_trade_unions
-			}
-		}
-        owner = {
-            has_technology_researched = socialism
-            literacy_rate >= 0.60
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
-                }
-			}
-			add = 60
-		}
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                        is_interest_group_type = ig_intelligentsia
-                        is_interest_group_type = ig_trade_unions
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 doctor = {
@@ -338,49 +117,8 @@ doctor = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        interest_group = {
-			OR = {
-				is_interest_group_type = ig_devout
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_trade_unions
-			}
-		}
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                        is_interest_group_type = ig_rural_folk
-                        is_interest_group_type = ig_intelligentsia
-                        is_interest_group_type = ig_petty_bourgeoisie
-                        is_interest_group_type = ig_trade_unions
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 engineer = {
@@ -403,53 +141,8 @@ engineer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_industrialists
-                is_interest_group_type = ig_trade_unions
-			}
-		}
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_intelligentsia
-                        is_interest_group_type = ig_industrialists
-                        is_interest_group_type = ig_trade_unions
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 entrepreneur = {
@@ -472,60 +165,8 @@ entrepreneur = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-           owner = {  has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_industrialists
-                is_interest_group_type = ig_petty_bourgeoisie
-			}
-		}
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_industrialists
-                    }
-                }
-            }
-			add = 60
-		}
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 mill_owner = {
@@ -548,58 +189,8 @@ mill_owner = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_council_republic }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_command_economy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_industrialists
-			}
-		}
-        owner = {
-            has_technology_researched = manufacturies
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_industrialists
-                    }
-                }
-            }
-			add = 90
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 farmer = {
@@ -622,59 +213,8 @@ farmer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_landowners
-                is_interest_group_type = ig_rural_folk
-			}
-		}
-        owner = {
-            has_technology_researched = socialism
-            literacy_rate >= 0.60
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                    }
-                }
-            }
-			add = 60
-		}
-        if = {
-            limit = {
-                interest_group = {
-                    is_interest_group_type = ig_landowners
-                }
-                OR = {
-                    owner = { has_law = law_type:law_anarchy }
-                    owner = { has_law = law_type:law_command_economy }
-                    owner = { has_law = law_type:law_council_republic }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 journalist = {
@@ -697,55 +237,8 @@ journalist = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_industrialists
-                is_interest_group_type = ig_trade_unions
-			}
-		}
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                        is_interest_group_type = ig_armed_forces
-                        is_interest_group_type = ig_industrialists
-                        is_interest_group_type = ig_trade_unions
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 labourer = {
@@ -769,64 +262,8 @@ labourer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_devout
-                is_interest_group_type = ig_trade_unions
-			}
-		}
-        owner = {
-            has_technology_researched = socialism
-            literacy_rate >= 0.60
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_trade_unions
-                    }
-                }
-            }
-			add = 60
-		}
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 lawyer = {
@@ -849,64 +286,8 @@ lawyer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_anarchy }
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                        is_interest_group_type = ig_petty_bourgeoisie
-                        is_interest_group_type = ig_trade_unions
-                    }
-                }
-            }
-			add = 90
-		}
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                        is_interest_group_type = ig_devout
-                        is_interest_group_type = ig_intelligentsia
-                        is_interest_group_type = ig_industrialists
-                    }
-                }
-            }
-			add = 60
-		}
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 merchant = {
@@ -929,63 +310,8 @@ merchant = {
     }
 
 	possible = {
-        has_role = politician
-
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        } 
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_industrialists
-                is_interest_group_type = ig_petty_bourgeoisie
-			}
-		}
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
-                }
-            }
-			add = 60
-		}
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_intelligentsia
-                        is_interest_group_type = ig_industrialists
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 military_officer = {
@@ -1009,55 +335,8 @@ military_officer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_landowners
-                is_interest_group_type = ig_armed_forces
-			}
-		}
-        owner = {
-            has_technology_researched = standing_army
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
-                }
-            }
-			add = 90
-		}
-		if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 landed_elite = {
@@ -1080,39 +359,8 @@ landed_elite = {
     }
 
 	possible = {
-        has_role = politician
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_landowners
-			}
-		}
-        NOT = {
-            owner = { has_law = law_type:law_council_republic }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_command_economy }
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
-                }
-            }
-			add = 90
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 police_chief = {
@@ -1135,58 +383,8 @@ police_chief = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_no_police }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_armed_forces
-			}
-		}
-        owner = {
-            has_technology_researched = socialism
-            literacy_rate >= 0.60
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                        is_interest_group_type = ig_armed_forces
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 political_dynasty = {
@@ -1210,63 +408,8 @@ political_dynasty = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_anarchy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_landowners
-                is_interest_group_type = ig_armed_forces
-			}
-		}
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
-                }
-            }
-			add = 90
-		}
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
-                }
-            }
-			add = 60
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 religious_leader = {
@@ -1290,58 +433,8 @@ religious_leader = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_devout
-                is_interest_group_type = ig_rural_folk
-			}
-		}
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                    }
-                }
-            }
-			add = 90
-		}
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                    }
-                }
-            }
-			add = 60
-		}
-        if = {
-            limit = {
-                owner = { has_law = law_type:law_theocracy }
-            }
-            add = 10
-        }
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 soldier = {
@@ -1365,56 +458,8 @@ soldier = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_peasant_levies }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_armed_forces
-			}
-		}
-        owner = {
-            has_technology_researched = socialism
-            literacy_rate >= 0.60
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
-                }
-            }
-			add = 60
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 teacher = {
@@ -1437,60 +482,8 @@ teacher = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
-        }
-        NOT = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
-        }
-        NOT = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
-        }
-        NOT = {
-            owner = { has_law = law_type:law_no_schools }
-        }
-        interest_group = {
-			OR = {
-                is_interest_group_type = ig_devout
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_trade_unions
-			}
-		}
-        owner = {
-            has_technology_researched = socialism
-            literacy_rate >= 0.60
-        }
-        NOT = { has_variable = has_historical_traits }
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 0
-        if = {
-            limit = {
-                interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                        is_interest_group_type = ig_rural_folk
-                        is_interest_group_type = ig_trade_unions
-                    }
-                }
-            }
-			add = 30
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }
 
 good_education = {
@@ -1513,21 +506,6 @@ good_education = {
     }
 
 	possible = {
-        has_role = politician
+		always = no # reserved for events
 	}
-	
-	weight = {
-		value = 10
-        if = { 
-            limit = {
-                has_variable = david_copperfield_var 
-            }
-            multiply = 10
-        }
-	}
-	
-	replace = {
-	}
-	
-	value = 1
 }

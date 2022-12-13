@@ -21,11 +21,11 @@ academic = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -41,6 +41,30 @@ academic = {
             has_technology_researched = academia
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -48,12 +72,10 @@ academic = {
 		if = {
 			limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_intelligentsia
-                    }
+                    is_interest_group_type = ig_intelligentsia
                 }
 			}
-			add = 90
+			add = 490
 		}
 		if = {
             limit = {
@@ -65,7 +87,7 @@ academic = {
                     }  
                 }
             } 
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -96,19 +118,19 @@ banker = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_theocracy }
         }
@@ -119,14 +141,36 @@ banker = {
             owner = { has_law = law_type:law_command_economy }
         }
         interest_group = {
-			OR = {
 				is_interest_group_type = ig_industrialists
-			}
 		}
         owner = {
             has_technology_researched = banking
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -134,12 +178,10 @@ banker = {
 		if = {
             limit = {
 			    interest_group = {
-                    OR = {
                         is_interest_group_type = ig_industrialists
-                    }
                 }
 			}
-			add = 90
+			add = 490
 		}
 	}
 	
@@ -170,19 +212,19 @@ bureaucrat = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -195,6 +237,30 @@ bureaucrat = {
 			}
 		}
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -209,21 +275,19 @@ bureaucrat = {
                     }
                 }
 			}
-			add = 30
+			add = 430
 		}
         if = {
             limit = {
                 AND = {
                     interest_group = {
-                        OR = {
-                            is_interest_group_type = ig_landowners
-                        }
+                        is_interest_group_type = ig_landowners
                     }
                     owner = { has_law = law_type:law_hereditary_bureaucrats }
                 }
 			}
             
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -245,7 +309,7 @@ clerk = {
 
 	country_modifier = {
         state_tax_capacity_mult = 0.1
-        building_railway_throughput_mult = -0.5
+        building_railway_throughput_mult = -0.05
 	}
 
     interest_group_modifier = {
@@ -254,19 +318,19 @@ clerk = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -283,6 +347,30 @@ clerk = {
             literacy_rate >= 0.60
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -290,12 +378,10 @@ clerk = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
+                    is_interest_group_type = ig_petty_bourgeoisie
                 }
 			}
-			add = 60
+			add = 460
 		}
         if = {
             limit = {
@@ -307,7 +393,7 @@ clerk = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -329,7 +415,7 @@ doctor = {
 	}
 
 	country_modifier = {
-        state_mortality_mult = 0.025
+        state_mortality_mult = -0.02
         unit_kill_rate_add = -0.1
 	}
 
@@ -339,11 +425,11 @@ doctor = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -357,6 +443,30 @@ doctor = {
 			}
 		}
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -373,7 +483,7 @@ doctor = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -404,19 +514,19 @@ engineer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -428,6 +538,30 @@ engineer = {
 			}
 		}
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -442,7 +576,7 @@ engineer = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -473,19 +607,19 @@ entrepreneur = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
            owner = {  has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -496,6 +630,30 @@ entrepreneur = {
 			}
 		}
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -503,22 +661,18 @@ entrepreneur = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_industrialists
-                    }
+                    is_interest_group_type = ig_industrialists
                 }
             }
-			add = 60
+			add = 460
 		}
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
+                    is_interest_group_type = ig_petty_bourgeoisie
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -549,19 +703,19 @@ mill_owner = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -572,14 +726,36 @@ mill_owner = {
             owner = { has_law = law_type:law_command_economy }
         }
         interest_group = {
-			OR = {
-                is_interest_group_type = ig_industrialists
-			}
+            is_interest_group_type = ig_industrialists
 		}
         owner = {
             has_technology_researched = manufacturies
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -587,12 +763,10 @@ mill_owner = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_industrialists
-                    }
+                    is_interest_group_type = ig_industrialists
                 }
             }
-			add = 90
+			add = 490
 		}
 	}
 	
@@ -623,11 +797,11 @@ farmer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -642,6 +816,30 @@ farmer = {
             literacy_rate >= 0.60
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -649,12 +847,10 @@ farmer = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                    }
+                    is_interest_group_type = ig_rural_folk
                 }
             }
-			add = 60
+			add = 460
 		}
         if = {
             limit = {
@@ -667,7 +863,7 @@ farmer = {
                     owner = { has_law = law_type:law_council_republic }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -698,19 +894,19 @@ journalist = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -723,6 +919,30 @@ journalist = {
 			}
 		}
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -738,7 +958,7 @@ journalist = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -770,19 +990,19 @@ labourer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -797,6 +1017,30 @@ labourer = {
             literacy_rate >= 0.60
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -804,22 +1048,18 @@ labourer = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_trade_unions
-                    }
+                    is_interest_group_type = ig_trade_unions
                 }
             }
-			add = 60
+			add = 460
 		}
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                    }
+                    is_interest_group_type = ig_devout
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -845,16 +1085,16 @@ lawyer = {
 	}
 
     interest_group_modifier = {
-        interest_group_pol_str_mult = 0.15
+        interest_group_pol_str_mult = 0.1
     }
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -862,6 +1102,30 @@ lawyer = {
             owner = { has_law = law_type:law_anarchy }
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -876,7 +1140,7 @@ lawyer = {
                     }
                 }
             }
-			add = 90
+			add = 490
 		}
         if = {
             limit = {
@@ -889,17 +1153,15 @@ lawyer = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
+                    is_interest_group_type = ig_armed_forces
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -921,7 +1183,7 @@ merchant = {
 
 	country_modifier = {
         country_trade_route_quantity_mult = 0.1
-        state_tax_waste_add = 0.01
+        state_tax_waste_add = 0.02
 	}
 
     interest_group_modifier = {
@@ -931,19 +1193,19 @@ merchant = {
 	possible = {
         has_role = politician
 
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         } 
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -955,6 +1217,29 @@ merchant = {
 			}
 		}
         NOT = { has_variable = has_historical_traits }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -962,12 +1247,10 @@ merchant = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
+                    is_interest_group_type = ig_petty_bourgeoisie
                 }
             }
-			add = 60
+			add = 460
 		}
 		if = {
             limit = {
@@ -978,8 +1261,14 @@ merchant = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
+        if = {
+            limit = {
+                has_variable = david_copperfield_var
+            }
+            add = 1000
+        }
 	}
 	
 	replace = {
@@ -1010,11 +1299,11 @@ military_officer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1028,6 +1317,30 @@ military_officer = {
             has_technology_researched = standing_army
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -1035,22 +1348,18 @@ military_officer = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
+                    is_interest_group_type = ig_armed_forces
                 }
             }
-			add = 90
+			add = 490
 		}
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
+                    is_interest_group_type = ig_landowners
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -1082,9 +1391,7 @@ landed_elite = {
 	possible = {
         has_role = politician
         interest_group = {
-			OR = {
-                is_interest_group_type = ig_landowners
-			}
+            is_interest_group_type = ig_landowners
 		}
         NOT = {
             owner = { has_law = law_type:law_council_republic }
@@ -1093,6 +1400,30 @@ landed_elite = {
             owner = { has_law = law_type:law_command_economy }
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -1100,12 +1431,10 @@ landed_elite = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
+                    is_interest_group_type = ig_landowners
                 }
             }
-			add = 90
+			add = 490
 		}
 	}
 	
@@ -1136,19 +1465,19 @@ police_chief = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1166,6 +1495,30 @@ police_chief = {
             literacy_rate >= 0.60
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -1179,7 +1532,7 @@ police_chief = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -1211,19 +1564,19 @@ political_dynasty = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1237,6 +1590,30 @@ political_dynasty = {
 			}
 		}
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -1244,22 +1621,18 @@ political_dynasty = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
+                    is_interest_group_type = ig_landowners
                 }
             }
-			add = 90
+			add = 490
 		}
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
+                    is_interest_group_type = ig_armed_forces
                 }
             }
-			add = 60
+			add = 460
 		}
 	}
 	
@@ -1291,11 +1664,11 @@ religious_leader = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -1306,6 +1679,30 @@ religious_leader = {
 			}
 		}
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -1313,28 +1710,24 @@ religious_leader = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                    }
+                    is_interest_group_type = ig_devout
                 }
             }
-			add = 90
+			add = 490
 		}
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                    }
+                    is_interest_group_type = ig_rural_folk
                 }
             }
-			add = 60
+			add = 460
 		}
         if = {
             limit = {
                 owner = { has_law = law_type:law_theocracy }
             }
-            add = 10
+            add = 410
         }
 	}
 	
@@ -1366,19 +1759,19 @@ soldier = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1386,15 +1779,37 @@ soldier = {
             owner = { has_law = law_type:law_peasant_levies }
         }
         interest_group = {
-			OR = {
-                is_interest_group_type = ig_armed_forces
-			}
+            is_interest_group_type = ig_armed_forces
 		}
         owner = {
             has_technology_researched = socialism
             literacy_rate >= 0.60
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -1402,12 +1817,10 @@ soldier = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
+                    is_interest_group_type = ig_armed_forces
                 }
             }
-			add = 60
+			add = 460
 		}
 	}
 	
@@ -1438,19 +1851,19 @@ teacher = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1469,6 +1882,30 @@ teacher = {
             literacy_rate >= 0.60
         }
         NOT = { has_variable = has_historical_traits }
+        NOT = { has_variable = david_copperfield_var }
+        NOR = {
+            has_trait = academic
+            has_trait = banker
+            has_trait = bureaucrat
+            has_trait = clerk
+            has_trait = doctor
+            has_trait = engineer
+            has_trait = entrepreneur
+            has_trait = mill_owner
+            has_trait = farmer
+            has_trait = journalist
+            has_trait = labourer
+            has_trait = lawyer
+            has_trait = merchant
+            has_trait = military_officer
+            has_trait = landed_elite
+            has_trait = police_chief
+            has_trait = political_dynasty
+            has_trait = religious_leader
+            has_trait = soldier
+            has_trait = teacher
+        }
+        age > define:NPortrait|GRACEFUL_AGING_START
 	}
 	
 	weight = {
@@ -1483,47 +1920,8 @@ teacher = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
-	}
-	
-	replace = {
-	}
-	
-	value = 1
-}
-
-good_education = {
-	type = skill
-	texture = "gfx/interface/icons/character_trait_icons/good_education.dds"
-	
-	character_modifier = {
-        character_popularity_add = 10
-	}
-	
-	command_modifier = {
-	}
-
-	country_modifier = {
-        country_prestige_add = 10
-	}
-
-    interest_group_modifier = {
-        interest_group_in_government_approval_add = 1
-    }
-
-	possible = {
-        has_role = politician
-	}
-	
-	weight = {
-		value = 10
-        if = { 
-            limit = {
-                has_variable = david_copperfield_var 
-            }
-            multiply = 10
-        }
 	}
 	
 	replace = {

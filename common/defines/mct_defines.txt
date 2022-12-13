@@ -1,0 +1,5 @@
+﻿# Don't really need this, I think 3 skills is still the right number
+
+# NCharacters = {
+# 	MAX_TRAITS_SKILL = 4					# Increased from default of  3 to account for backgrounds
+# }

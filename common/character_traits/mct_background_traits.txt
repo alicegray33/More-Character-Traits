@@ -415,7 +415,7 @@ doctor = {
 	}
 
 	country_modifier = {
-        state_mortality_mult = 0.025
+        state_mortality_mult = -0.02
         unit_kill_rate_add = -0.1
 	}
 
@@ -1085,7 +1085,7 @@ lawyer = {
 	}
 
     interest_group_modifier = {
-        interest_group_pol_str_mult = 0.15
+        interest_group_pol_str_mult = 0.1
     }
 
 	possible = {
@@ -1183,7 +1183,7 @@ merchant = {
 
 	country_modifier = {
         country_trade_route_quantity_mult = 0.1
-        state_tax_waste_add = 0.01
+        state_tax_waste_add = 0.02
 	}
 
     interest_group_modifier = {

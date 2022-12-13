@@ -19,7 +19,7 @@ chess_master = {
 	}
 	
 	country_modifier = {
-		country_law_enactment_time_mult = 0.1
+		country_law_enactment_time_mult = -0.1
         country_prestige_mult = 0.05
 	}
 

@@ -72,9 +72,7 @@ academic = {
 		if = {
 			limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_intelligentsia
-                    }
+                    is_interest_group_type = ig_intelligentsia
                 }
 			}
 			add = 490
@@ -143,9 +141,7 @@ banker = {
             owner = { has_law = law_type:law_command_economy }
         }
         interest_group = {
-			OR = {
 				is_interest_group_type = ig_industrialists
-			}
 		}
         owner = {
             has_technology_researched = banking
@@ -182,9 +178,7 @@ banker = {
 		if = {
             limit = {
 			    interest_group = {
-                    OR = {
                         is_interest_group_type = ig_industrialists
-                    }
                 }
 			}
 			add = 490
@@ -287,9 +281,7 @@ bureaucrat = {
             limit = {
                 AND = {
                     interest_group = {
-                        OR = {
-                            is_interest_group_type = ig_landowners
-                        }
+                        is_interest_group_type = ig_landowners
                     }
                     owner = { has_law = law_type:law_hereditary_bureaucrats }
                 }
@@ -386,9 +378,7 @@ clerk = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
+                    is_interest_group_type = ig_petty_bourgeoisie
                 }
 			}
 			add = 460
@@ -671,9 +661,7 @@ entrepreneur = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_industrialists
-                    }
+                    is_interest_group_type = ig_industrialists
                 }
             }
 			add = 460
@@ -681,9 +669,7 @@ entrepreneur = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
+                    is_interest_group_type = ig_petty_bourgeoisie
                 }
             }
 			add = 430
@@ -740,9 +726,7 @@ mill_owner = {
             owner = { has_law = law_type:law_command_economy }
         }
         interest_group = {
-			OR = {
-                is_interest_group_type = ig_industrialists
-			}
+            is_interest_group_type = ig_industrialists
 		}
         owner = {
             has_technology_researched = manufacturies
@@ -779,9 +763,7 @@ mill_owner = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_industrialists
-                    }
+                    is_interest_group_type = ig_industrialists
                 }
             }
 			add = 490
@@ -865,9 +847,7 @@ farmer = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                    }
+                    is_interest_group_type = ig_rural_folk
                 }
             }
 			add = 460
@@ -1068,9 +1048,7 @@ labourer = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_trade_unions
-                    }
+                    is_interest_group_type = ig_trade_unions
                 }
             }
 			add = 460
@@ -1078,9 +1056,7 @@ labourer = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                    }
+                    is_interest_group_type = ig_devout
                 }
             }
 			add = 430
@@ -1182,9 +1158,7 @@ lawyer = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
+                    is_interest_group_type = ig_armed_forces
                 }
             }
 			add = 430
@@ -1273,9 +1247,7 @@ merchant = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_petty_bourgeoisie
-                    }
+                    is_interest_group_type = ig_petty_bourgeoisie
                 }
             }
 			add = 460
@@ -1376,9 +1348,7 @@ military_officer = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
+                    is_interest_group_type = ig_armed_forces
                 }
             }
 			add = 490
@@ -1386,9 +1356,7 @@ military_officer = {
 		if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
+                    is_interest_group_type = ig_landowners
                 }
             }
 			add = 430
@@ -1423,9 +1391,7 @@ landed_elite = {
 	possible = {
         has_role = politician
         interest_group = {
-			OR = {
-                is_interest_group_type = ig_landowners
-			}
+            is_interest_group_type = ig_landowners
 		}
         NOT = {
             owner = { has_law = law_type:law_council_republic }
@@ -1465,9 +1431,7 @@ landed_elite = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
+                    is_interest_group_type = ig_landowners
                 }
             }
 			add = 490
@@ -1657,9 +1621,7 @@ political_dynasty = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_landowners
-                    }
+                    is_interest_group_type = ig_landowners
                 }
             }
 			add = 490
@@ -1667,9 +1629,7 @@ political_dynasty = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
+                    is_interest_group_type = ig_armed_forces
                 }
             }
 			add = 460
@@ -1750,9 +1710,7 @@ religious_leader = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_devout
-                    }
+                    is_interest_group_type = ig_devout
                 }
             }
 			add = 490
@@ -1760,9 +1718,7 @@ religious_leader = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_rural_folk
-                    }
+                    is_interest_group_type = ig_rural_folk
                 }
             }
 			add = 460
@@ -1823,9 +1779,7 @@ soldier = {
             owner = { has_law = law_type:law_peasant_levies }
         }
         interest_group = {
-			OR = {
-                is_interest_group_type = ig_armed_forces
-			}
+            is_interest_group_type = ig_armed_forces
 		}
         owner = {
             has_technology_researched = socialism
@@ -1863,9 +1817,7 @@ soldier = {
         if = {
             limit = {
                 interest_group = {
-                    OR = {
-                        is_interest_group_type = ig_armed_forces
-                    }
+                    is_interest_group_type = ig_armed_forces
                 }
             }
 			add = 460

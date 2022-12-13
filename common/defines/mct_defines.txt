@@ -1,0 +1,3 @@
+﻿NCharacters = {
+	MAX_TRAITS_SKILL = 4					# Increased from default of  4 to account for backgrounds
+}

@@ -30,7 +30,7 @@ chess_master = {
 	}
 	
 	weight = {
-		value = 5	# low base weight, since any character can qualify for this trait
+		value = 5	# Same base as vanilla traits such as Bandit and Explorer
         if = {
             limit = {
                 OR = {
@@ -38,7 +38,7 @@ chess_master = {
                     has_trait = engineer
                 }
             }
-            multiply = 2
+            multiply = 4
         }
 		if = {
 			limit = {
@@ -85,7 +85,7 @@ philanthropist = {
 	}
 	
 	weight = {
-		value = 5	# low base weight, since any character can qualify for this trait
+		value = 5	# Same base as vanilla traits such as Bandit and Explorer
         if = {
 			limit = {
 				OR = {
@@ -93,7 +93,7 @@ philanthropist = {
                     has_trait = pious
 				}
 			}
-			multiply = 3
+			multiply = 4
 		}
 		if = {
 			limit = {
@@ -135,7 +135,7 @@ artist = {
 	}
 	
 	weight = {
-		value = 5	# low base weight, since any character can qualify for this trait
+		value = 5	# Same base as vanilla traits such as Bandit and Explorer
         if = {
 			limit = {
 				OR = {
@@ -145,7 +145,7 @@ artist = {
                     has_trait = eccentric
 				}
 			}
-			multiply = 3
+			multiply = 4
 		}
 		if = {
 			limit = {

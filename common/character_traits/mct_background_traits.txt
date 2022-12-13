@@ -53,7 +53,7 @@ academic = {
                     }
                 }
 			}
-			add = 90
+			add = 490
 		}
 		if = {
             limit = {
@@ -65,7 +65,7 @@ academic = {
                     }  
                 }
             } 
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -139,7 +139,7 @@ banker = {
                     }
                 }
 			}
-			add = 90
+			add = 490
 		}
 	}
 	
@@ -209,7 +209,7 @@ bureaucrat = {
                     }
                 }
 			}
-			add = 30
+			add = 430
 		}
         if = {
             limit = {
@@ -223,7 +223,7 @@ bureaucrat = {
                 }
 			}
             
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -295,7 +295,7 @@ clerk = {
                     }
                 }
 			}
-			add = 60
+			add = 460
 		}
         if = {
             limit = {
@@ -307,7 +307,7 @@ clerk = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -373,7 +373,7 @@ doctor = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -442,7 +442,7 @@ engineer = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -508,7 +508,7 @@ entrepreneur = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
 		if = {
             limit = {
@@ -518,7 +518,7 @@ entrepreneur = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -592,7 +592,7 @@ mill_owner = {
                     }
                 }
             }
-			add = 90
+			add = 490
 		}
 	}
 	
@@ -654,7 +654,7 @@ farmer = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
         if = {
             limit = {
@@ -667,7 +667,7 @@ farmer = {
                     owner = { has_law = law_type:law_council_republic }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -738,7 +738,7 @@ journalist = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -809,7 +809,7 @@ labourer = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
 		if = {
             limit = {
@@ -819,7 +819,7 @@ labourer = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -876,7 +876,7 @@ lawyer = {
                     }
                 }
             }
-			add = 90
+			add = 490
 		}
         if = {
             limit = {
@@ -889,7 +889,7 @@ lawyer = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
 		if = {
             limit = {
@@ -899,7 +899,7 @@ lawyer = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -967,7 +967,7 @@ merchant = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
 		if = {
             limit = {
@@ -978,7 +978,7 @@ merchant = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -1040,7 +1040,7 @@ military_officer = {
                     }
                 }
             }
-			add = 90
+			add = 490
 		}
 		if = {
             limit = {
@@ -1050,7 +1050,7 @@ military_officer = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -1105,7 +1105,7 @@ landed_elite = {
                     }
                 }
             }
-			add = 90
+			add = 490
 		}
 	}
 	
@@ -1179,7 +1179,7 @@ police_chief = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -1249,7 +1249,7 @@ political_dynasty = {
                     }
                 }
             }
-			add = 90
+			add = 490
 		}
         if = {
             limit = {
@@ -1259,7 +1259,7 @@ political_dynasty = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
 	}
 	
@@ -1318,7 +1318,7 @@ religious_leader = {
                     }
                 }
             }
-			add = 90
+			add = 490
 		}
         if = {
             limit = {
@@ -1328,13 +1328,13 @@ religious_leader = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
         if = {
             limit = {
                 owner = { has_law = law_type:law_theocracy }
             }
-            add = 10
+            add = 410
         }
 	}
 	
@@ -1407,7 +1407,7 @@ soldier = {
                     }
                 }
             }
-			add = 60
+			add = 460
 		}
 	}
 	
@@ -1483,7 +1483,7 @@ teacher = {
                     }
                 }
             }
-			add = 30
+			add = 430
 		}
 	}
 	
@@ -1493,41 +1493,41 @@ teacher = {
 	value = 1
 }
 
-good_education = {
-	type = skill
-	texture = "gfx/interface/icons/character_trait_icons/good_education.dds"
+# good_education = {
+# 	type = skill
+# 	texture = "gfx/interface/icons/character_trait_icons/good_education.dds"
 	
-	character_modifier = {
-        character_popularity_add = 10
-	}
+# 	character_modifier = {
+#         character_popularity_add = 10
+# 	}
 	
-	command_modifier = {
-	}
+# 	command_modifier = {
+# 	}
 
-	country_modifier = {
-        country_prestige_add = 10
-	}
+# 	country_modifier = {
+#         country_prestige_add = 10
+# 	}
 
-    interest_group_modifier = {
-        interest_group_in_government_approval_add = 1
-    }
+#     interest_group_modifier = {
+#         interest_group_in_government_approval_add = 1
+#     }
 
-	possible = {
-        has_role = politician
-	}
+# 	possible = {
+#         has_role = politician
+# 	}
 	
-	weight = {
-		value = 10
-        if = { 
-            limit = {
-                has_variable = david_copperfield_var 
-            }
-            multiply = 10
-        }
-	}
+# 	weight = {
+# 		value = 10
+#         if = { 
+#             limit = {
+#                 has_variable = david_copperfield_var 
+#             }
+#             multiply = 10
+#         }
+# 	}
 	
-	replace = {
-	}
+# 	replace = {
+# 	}
 	
-	value = 1
-}
+# 	value = 1
+# }

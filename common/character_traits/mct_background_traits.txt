@@ -21,11 +21,11 @@ academic = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -118,19 +118,19 @@ banker = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_theocracy }
         }
@@ -212,19 +212,19 @@ bureaucrat = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -318,19 +318,19 @@ clerk = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -425,11 +425,11 @@ doctor = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -514,19 +514,19 @@ engineer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -607,19 +607,19 @@ entrepreneur = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
            owner = {  has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -703,19 +703,19 @@ mill_owner = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -797,11 +797,11 @@ farmer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -894,19 +894,19 @@ journalist = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -990,19 +990,19 @@ labourer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1090,11 +1090,11 @@ lawyer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -1193,19 +1193,19 @@ merchant = {
 	possible = {
         has_role = politician
 
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         } 
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1299,11 +1299,11 @@ military_officer = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1465,19 +1465,19 @@ police_chief = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1564,19 +1564,19 @@ political_dynasty = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1664,11 +1664,11 @@ religious_leader = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
@@ -1759,19 +1759,19 @@ soldier = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }
@@ -1851,19 +1851,19 @@ teacher = {
 
 	possible = {
         has_role = politician
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law = law_type:law_monarchy }
         }
-        NOT = {
+        NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
         }
-        NOT = {
+        NAND = {
             is_heir = yes
             owner = { has_law =law_type:law_theocracy }
         }

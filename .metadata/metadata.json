@@ -2,7 +2,7 @@
   "name" : "More Character Traits",
   "id" : "",
   "version" : "0.1",
-  "supported_game_version" : "1.1.1",
+  "supported_game_version" : "1.1.2",
   "short_description" : "Adds more character traits to the game",
   "tags" : [],
   "relationships" : [],

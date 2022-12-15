@@ -1,12 +1,12 @@
 This mod adds 41 new character traits to the game. This creates a greater diversity of characters, and adds more flavour to the game.
 
-If you're sick of seeing so many of your characters as Bandits then this mod will help! More character traits means you're less likely to see the same traits keep coming up on your characters all the time. I know opium addiction was quite the thing in the game period but I got a little tired of all my politicians and generals being opium addicts and found it quite immersion-breaking. So this mod is also great for those of you who like the roleplay aspect of the game.
+If you're sick of seeing so many of your characters as Bandits then this mod will help! More character traits mean you're less likely to see the same traits keep coming up on your characters all the time. I know opium addiction was quite the thing in the game period, but I got a little tired of all my politicians and generals being opium addicts and found it quite immersion-breaking. So this mod is also great for those of you who like the roleplay aspect of the game.
 
 If you're not aware, the game splits the different character traits into three categories: Conditions, Personalities and Skills
 
 [h2] More Conditions [/h2]
 
-Since Paradox fixed the character aging problem in the 1.1 patch it means character health now has an influence on how long your character lives (A characer with 0% health has a chance of dying between 50 and 80. A character with 200% health has a chance of dying between 70 and 100). But guess what? Most of the existing character traits only give a malus to health. This means most characters don't even reach the age of 80. That may be more realistic to an extent, but this mod adds a few characters traits relating to healthy activities and hobbies that your character may randomly get. These new Conditions give a slight increase to health and therefore an increased chance of a (slightly) longer lifespan. Some of these also give other modifiers.
+Since Paradox fixed the character aging problem in the 1.1 patch, it means character health now has an influence on how long your character lives (A character with 0% health has a chance of dying between 50 and 80. A character with 200% health has a chance of dying between 70 and 100). But guess what? Most of the existing character traits only give a malus to health. This means most characters don't even reach the age of 80. That may be more realistic to an extent, but this mod adds a few characters traits relating to healthy activities and hobbies that your character may randomly get. These new Conditions give a slight increase to health and therefore an increased chance of a (slightly) longer lifespan. Some of these also give other modifiers.
 
 [list]
     [*]Rambler
@@ -18,7 +18,7 @@ Since Paradox fixed the character aging problem in the 1.1 patch it means charac
 
 [h2] More Personalities [/h2]
 
-Characters usually only end up with one personality (some historical characters end up with two), so these new personalities fit seemlessly in the game and add more variety. These typically effect a characters popularity, one or two effect health but they also give command modifiers (for generals/admirals), country modifiers (for rulers) and/or IG modifiers (for IG leaders).
+Characters usually only end up with one personality (some historical characters end up with two), so these new personalities fit seamlessly in the game and add more variety. These typically affect a character's popularity, one or two affect health, but they also give command modifiers (for generals/admirals), country modifiers (for rulers) and/or IG modifiers (for IG leaders).
 
 [list]
     [*]Absent-Minded
@@ -37,7 +37,7 @@ Characters usually only end up with one personality (some historical characters 
 
 [h2] More Skills [/h2]
 
-Most existing skills in the base game are either politician only (eg Inspirational Orator) or general/admiral only (eg Expert Offensive Planner). But there are also some skills that can be applied to any character type. By default there are just two: Explorer and Bandit. This mods adds a few more skills that can apply to any character. 
+Most existing skills in the base game are either politician only (eg Inspirational Orator) or general/admiral only (eg Expert Offensive Planner). But there are also some skills that can apply to any character type. By default, there are just two: Explorer and Bandit. This mod adds a few more skills that can apply to any character. 
 
 [list]
 	[*]Chess Master
@@ -48,11 +48,11 @@ Most existing skills in the base game are either politician only (eg Inspiration
 
 [h2] New: Character Backgrounds [/h2]
 
-Currently these only get assigned to politicans and not generals or admirals. My aim is for these traits to represent what the character did before they got in to politics and how that background shapes their abilities. They each have effects for the character as IG leader, and they each have two country modifiers (for rulers): one bonus and one malus. 
+Currently, these only get assigned to politicians and not generals or admirals. My aim is for these traits to represent what the character did before they got in to politics and how that background shapes their abilities. They each have effects for the character as IG leader, and they each have two country modifiers (for rulers): one bonus and one malus. 
 
 Some of these traits will only appear on characters of specific IG groups (eg Mill Owner may be assigned to an Industrialist character but won't be assigned to a Trade Union character). Some of them require specific technology before they'll appear (eg Banking is required for the Banker background). And some of the "lower-class" related backgrounds (such as Labourer and Farmer etc) will only appear if your country has both Socialism and a literacy rate over 60%. Also, some will only appear with or without specific laws (eg Landed Elite won't appear if you have Command Economy).
 
-Technically the game still treats these as "skills" but each politician should only ever have one. Though due to RNG there's still a chance that a politician might not end up with any of them. 
+Technically, the game still treats these as "skills" but each politician should only ever have one. Though due to RNG there's still a chance that a politician might not end up with any of them. 
 
 Also note, historical characters won't receive one of these backgrounds. It just didn't make sense to assign them a random one which might not be historically accurate. 
 
@@ -82,21 +82,21 @@ Also note, historical characters won't receive one of these backgrounds. It just
 [h1] Future Plans [/h1]
 
 [list]
-	[*]I still have a few more ideas for more character traits that I'd like to add - in particular the (generic) skills category.
-	[*]I plan to add some specific events that can fire for characters with certain traits, or events that might add a specific trait to a characer. I also like the idea of an event that might fire to "elect" the new leader of an IG group and give you a couple of options of what background the character comes from. Or events that might remove certain traits!
+	[*]I still have a few more ideas for more character traits that I'd like to add - in particular, the (generic) skills category.
+	[*]I plan to add some specific events that can fire for characters with certain traits, or events that might add a specific trait to a character. I also like the idea of an event that might fire to "elect" the new leader of an IG group and give you a couple of options of what background the character comes from. Or events that might remove certain traits!
 [/list]
 
 [h1] Compatibility [/h1]
 
-This mod does not change any existing character traits or events. In fact it doen't change any existing game files at all so should be compatible with just about anything. Though I would recommend to only start using this mod with a new game. Though you can start using the mod half-way through a play-through; you will only start to see these new traits appearing on new characters.
+This mod does not change any existing character traits or events. In fact, it doesn't change any existing game files at all so should be compatible with just about anything. Though I would recommend only starting using this mod with a new game. Though you can start using the mod halfway through a play-through; you will only start to see these new traits appearing on new characters.
 
 [h1] Caveat [/h1]
 
-Some country/ruler traits don't have any affect. This is a known bug that Paradox are aware of, so hopefully they will fix it sooner or later (unfortunately its not a bug that can be fixed by a mod).
+Some country/ruler traits don't have any effect. This is a known bug that Paradox are aware of, so hopefully they will fix it sooner or later (unfortunately, it's not a bug that can be fixed by a mod).
 
 [h1] Help Needed [/h1]
 
 [list]
-	[*]Currently this mod only has English localization. If anyone would like to help translate/create a localization for other languages then please get in touch!
-	[*]My art skills are pretty poor and I think the icons for these traits are rather basic and a bit too modern. If anyone would like to help me create better ones then please get in touch!
+	[*]Currently, this mod only has English localization. If anyone would like to help translate/create localizations for other languages, please get in touch! 
+	[*]My art skills are pretty poor and I think the icons for these traits are rather basic and a bit too modern. If anyone would like to help me create better ones, please get in touch!
 [/list]

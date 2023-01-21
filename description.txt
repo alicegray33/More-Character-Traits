@@ -80,7 +80,6 @@ Also note, historical characters won't receive one of these backgrounds. It just
 [/list]
 
 [h1] Future Plans [/h1]
-
 [list]
 	[*]I still have a few more ideas for more character traits that I'd like to add - in particular, the (generic) skills category.
 	[*]I plan to add some specific events that can fire for characters with certain traits, or events that might add a specific trait to a character. I also like the idea of an event that might fire to "elect" the new leader of an IG group and give you a couple of options of what background the character comes from. Or events that might remove certain traits!
@@ -90,6 +89,12 @@ Also note, historical characters won't receive one of these backgrounds. It just
 
 This mod does not change any existing character traits or events. In fact, it doesn't change any existing game files at all so should be compatible with just about anything. Though I would recommend only starting using this mod with a new game. Though you can start using the mod halfway through a play-through; you will only start to see these new traits appearing on new characters.
 
+[h1] Localizations [/h1]
+[list]
+	[*] Chinese: Available as part of this mod: [url=steamcommunity.com/sharedfiles/filedetails/?id=2880069248]牛奶汉化[/url] by [url=steamcommunity.com/profiles/76561198255881425]牛奶大魔王[/url]
+	[*] Brazilian/Portuguese: Now included as part of this mod; translation provided by [url=steamcommunity.com/id/theosikaros]Íkaros[/url]
+[/list]
+
 [h1] Caveat [/h1]
 
 Some country/ruler traits don't have any effect. This is a known bug that Paradox are aware of, so hopefully they will fix it sooner or later (unfortunately, it's not a bug that can be fixed by a mod).
@@ -97,6 +102,6 @@ Some country/ruler traits don't have any effect. This is a known bug that Parado
 [h1] Help Needed [/h1]
 
 [list]
-	[*]Currently, this mod only has English localization. If anyone would like to help translate/create localizations for other languages, please get in touch! 
+	[*]If anyone would like to help translate/create localizations for other languages, please get in touch! 
 	[*]My art skills are pretty poor and I think the icons for these traits are rather basic and a bit too modern. If anyone would like to help me create better ones, please get in touch!
 [/list]

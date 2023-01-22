@@ -91,8 +91,9 @@ This mod does not change any existing character traits or events. In fact, it do
 
 [h1] Localizations [/h1]
 [list]
-	[*] Chinese: Available as part of this mod: [url=steamcommunity.com/sharedfiles/filedetails/?id=2880069248]牛奶汉化[/url] by [url=steamcommunity.com/profiles/76561198255881425]牛奶大魔王[/url]
+	[*] Chinese: Available as part of the following mod: [url=steamcommunity.com/sharedfiles/filedetails/?id=2880069248]牛奶汉化[/url] by [url=steamcommunity.com/profiles/76561198255881425]牛奶大魔王[/url]
 	[*] Brazilian/Portuguese: Now included as part of this mod; translation provided by [url=steamcommunity.com/id/theosikaros]Íkaros[/url]
+	[*] Italian: Avaiable with the following mod: [url=steamcommunity.com/sharedfiles/filedetails/?id=2915315816]Traduzione Italiana[/url] by [url=steamcommunity.com/id/warhammer_ita][ITA] Warhammer[/url]
 [/list]
 
 [h1] Caveat [/h1]

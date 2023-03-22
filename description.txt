@@ -103,6 +103,6 @@ Some country/ruler traits don't have any effect. This is a known bug that Parado
 [h1] Help Needed [/h1]
 
 [list]
-	[*]If anyone would like to help translate/create localizations for other languages, please get in touch! 
+	[*]If anyone would like to help translate/create localizations for other languages, please get in touch!
 	[*]My art skills are pretty poor and I think the icons for these traits are rather basic and a bit too modern. If anyone would like to help me create better ones, please get in touch!
 [/list]

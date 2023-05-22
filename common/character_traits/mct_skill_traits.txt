@@ -35,6 +35,7 @@ chess_master = {
             limit = {
                 OR = {
                     has_trait = academic
+					has_trait = inventor
                     has_trait = engineer
                 }
             }

@@ -62,7 +62,7 @@ Also note, historical characters won't receive one of these backgrounds. It just
 	[*]Bureaucrat
 	[*]Clerk
 	[*]Doctor
-	[*]Engineer
+	[*]Inventor (previously Engineer)
 	[*]Entrepreneur
 	[*]Mill Owner
 	[*]Farmer

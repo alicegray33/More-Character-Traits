@@ -81,11 +81,9 @@ hunter = {
 		}
         if = {
 			limit = {
-				interest_group = {
-					OR = {
-						is_interest_group_type = ig_landowners
-						is_interest_group_type = ig_armed_forces
-					}
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_armed_forces
 				}
 			}
 			multiply = 3
@@ -130,12 +128,10 @@ horse_rider = {
 		}
         if = {
 			limit = {
-				interest_group = {
-					OR = {
-						is_interest_group_type = ig_landowners
-						is_interest_group_type = ig_armed_forces
-                        is_interest_group_type = ig_rural_folk
-					}
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_armed_forces
+					is_interest_group_type = ig_rural_folk
 				}
 			}
 			multiply = 2
@@ -226,11 +222,9 @@ fencer = {
 		}
         if = {
 			limit = {
-				interest_group = {
-					OR = {
-						is_interest_group_type = ig_landowners
-						is_interest_group_type = ig_armed_forces
-					}
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_armed_forces
 				}
 			}
 			multiply = 2

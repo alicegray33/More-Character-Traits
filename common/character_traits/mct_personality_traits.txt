@@ -90,7 +90,7 @@ arbitrary = {
 	country_modifier = {	
 		state_decree_cost_mult = -0.25
         country_opposition_ig_approval_add = -2
-        political_movement_radicalism_mult = 0.2
+        political_movement_radicalism_add = 0.2
 	}
 	
 	interest_group_modifier = {
@@ -125,7 +125,7 @@ calm = {
 	}
 	
 	country_modifier = {	
-        political_movement_radicalism_mult = -0.1
+        political_movement_radicalism_add = -0.1
 	}
 	
 	interest_group_modifier = {
@@ -243,7 +243,9 @@ eccentric = {
 	}
 	
 	country_modifier = {	
-        state_radicals_from_discrimination_mult = -0.25
+		country_radicalism_increases_violent_hostility_mult = -0.2
+		country_radicalism_increases_cultural_erasure_mult = -0.2
+		country_radicalism_increases_open_prejudice_mult = -0.2
 	}
 
 	agitator_modifier = {
@@ -332,7 +334,7 @@ kind = {
 	}
 	
 	country_modifier = {	
-        state_loyalists_from_sol_change_mult = 0.1
+        state_assimilation_mult = 0.2
 	}
 
 	agitator_modifier = {

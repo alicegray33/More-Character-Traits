@@ -1,4 +1,4 @@
-[h2] Updated for 1.7 [/h2]
+[h2] Updated for 1.8 [/h2]
 
 This mod adds 41 new character traits to the game. This creates a greater diversity of characters, and adds more flavour to the game.
 

@@ -115,7 +115,7 @@ banker = {
 
 	country_modifier = {
         country_minting_mult = 0.1
-        state_radicals_from_sol_change_mult = 0.1
+        state_radicals_from_political_movements_mult = 0.1
 	}
 
     agitator_modifier = {
@@ -627,8 +627,8 @@ entrepreneur = {
 	}
 
 	country_modifier = {
-        state_dependent_wage_mult = 0.1
-        state_radicals_from_discrimination_mult = 0.05
+        country_company_throughput_bonus_add = 0.1
+        state_lower_strata_expected_sol_add = 2
 	}
 
     agitator_modifier = {
@@ -1738,7 +1738,7 @@ religious_leader = {
 	}
 
 	country_modifier = {
-        state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+        state_conversion_mult = 0.2
         country_tech_spread_mult = -0.1
 	}
 
@@ -1843,11 +1843,11 @@ soldier = {
 	}
 
     agitator_modifier = {
-        political_movement_radicalism_mult = 0.1
+        political_movement_radicalism_add = 0.1
     }
 
     interest_group_modifier = {
-        political_movement_radicalism_mult = 0.2
+        political_movement_radicalism_add = 0.2
     }
 
 	possible = {

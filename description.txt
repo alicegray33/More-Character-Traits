@@ -1,3 +1,5 @@
+[h2] Updated for 1.7 [/h2]
+
 This mod adds 41 new character traits to the game. This creates a greater diversity of characters, and adds more flavour to the game.
 
 If you're sick of seeing so many of your characters as Bandits then this mod will help! More character traits mean you're less likely to see the same traits keep coming up on your characters all the time. I know opium addiction was quite the thing in the game period, but I got a little tired of all my politicians and generals being opium addicts and found it quite immersion-breaking. So this mod is also great for those of you who like the roleplay aspect of the game.
@@ -95,11 +97,14 @@ This mod does not change any existing character traits or events. In fact, it do
 	[*] Brazilian/Portuguese: Now included as part of this mod; translation provided by [url=steamcommunity.com/id/theosikaros]Íkaros[/url]
 	[*] Italian: Avaiable with the following mod: [url=steamcommunity.com/sharedfiles/filedetails/?id=2915315816]Traduzione Italiana[/url] by [url=steamcommunity.com/id/warhammer_ita][ITA] Warhammer[/url]
 	[*] Polish: Now included as part of this mod; translation provided by [url=steamcommunity.com/profiles/76561198409313440]WarpWhistle79[/url]
+	[*] German: Now included as part of this mod; translation provided by [url=steamcommunity.com/profiles/76561199014200773]Jack[/url]
+	[*] French: Available as part of the following mod: [url=steamcommunity.com/sharedfiles/filedetails/?id=3229899149]More Character Traits FR[/url] by [url=steamcommunity.com/profiles/76561198269399623]TweeDzzz[/url]
+	[*] Russian: Now included as part of this mod; translation provided by [url=steamcommunity.com/id/Essen1nn]✠Essen✠[/url]
 [/list]
 
-[h1] Caveat [/h1]
+[h1] Previous Versions [/h1]
 
-Some country/ruler traits don't have any effect. This is a known bug that Paradox are aware of, so hopefully they will fix it sooner or later (unfortunately, it's not a bug that can be fixed by a mod).
+Older versions of this mod for use with older versions of the game can be found [url=/github.com/alicegray33/More-Character-Traits/releases]here[/url]. Just download the zip file and extract it to your mods folder.
 
 [h1] Help Needed [/h1]
 

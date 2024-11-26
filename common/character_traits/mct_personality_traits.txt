@@ -23,9 +23,18 @@ absent_minded = {
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
-	weight = 1
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				has_role = agitator
+			}
+			multiply = 0.5
+		}
+	}
 	
 	replace = {																
 	}
@@ -55,6 +64,8 @@ appeaser = {
 	}				
 	
 	possible = {
+		NOT = { has_role = agitator }
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
 	weight = 1
@@ -77,7 +88,7 @@ arbitrary = {
 	}
 	
 	country_modifier = {	
-		country_decree_cost_mult = -0.25
+		state_decree_cost_mult = -0.25
         country_opposition_ig_approval_add = -2
         political_movement_radicalism_mult = 0.2
 	}
@@ -87,6 +98,8 @@ arbitrary = {
 	}				
 	
 	possible = {
+		NOT = { has_role = agitator }
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
 	weight = 1
@@ -120,9 +133,18 @@ calm = {
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
-	weight = 1
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				has_role = agitator
+			}
+			multiply = 0.4
+		}
+	}
 	
 	replace = {																
 	}
@@ -146,12 +168,17 @@ corrupt = {
         country_opposition_ig_approval_add = -1
         state_tax_waste_add = 0.02
 	}
+
+	agitator_modifier = {
+		interest_group_in_government_approval_add = 1
+	}
 	
 	interest_group_modifier = {
 		interest_group_in_government_approval_add = 2
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
 	weight = 1
@@ -182,9 +209,18 @@ deceitful = {
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
-	weight = 1
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				has_role = agitator
+			}
+			multiply = 0.75
+		}
+	}
 	
 	replace = {																
 	}
@@ -209,15 +245,28 @@ eccentric = {
 	country_modifier = {	
         state_radicals_from_discrimination_mult = -0.25
 	}
+
+	agitator_modifier = {
+		interest_group_pop_attraction_mult = -0.05
+	}
 	
 	interest_group_modifier = {
         interest_group_pop_attraction_mult = -0.1
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
-	weight = 1
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				has_role = agitator
+			}
+			multiply = 1.5
+		}
+	}
 	
 	replace = {																
 	}
@@ -241,15 +290,28 @@ greedy = {
         country_minting_mult = 0.1
         state_colony_growth_speed_mult = 0.1
 	}
+
+	agitator_modifier = {
+		interest_group_pop_attraction_mult = -0.05
+	}
 	
 	interest_group_modifier = {
         interest_group_pop_attraction_mult = -0.1
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
-	weight = 1
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				has_role = agitator
+			}
+			multiply = 0.5
+		}
+	}
 	
 	replace = {																
 	}
@@ -272,15 +334,28 @@ kind = {
 	country_modifier = {	
         state_loyalists_from_sol_change_mult = 0.1
 	}
+
+	agitator_modifier = {
+		interest_group_pop_attraction_mult = 0.05
+	}
 	
 	interest_group_modifier = {
         interest_group_pop_attraction_mult = 0.1
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
-	weight = 1
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				has_role = agitator
+			}
+			multiply = 0.8
+		}
+	}
 	
 	replace = {																
 	}
@@ -309,9 +384,18 @@ tough = {
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
-	weight = 1
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				has_role = agitator
+			}
+			multiply = 1.5
+		}
+	}
 	
 	replace = {																
 	}
@@ -336,12 +420,17 @@ uncouth = {
         country_laborers_pol_str_mult = 0.1
         country_improve_relations_speed_mult = -0.1
 	}
+
+	agitator_modifier = {
+		interest_group_pop_attraction_mult = -0.05
+	}
 	
 	interest_group_modifier = {
         interest_group_pop_attraction_mult = -0.1
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
 	weight = 1
@@ -373,6 +462,7 @@ wasteful = {
 	}				
 	
 	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
 	
 	weight = 1

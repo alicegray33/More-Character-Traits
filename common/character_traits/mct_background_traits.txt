@@ -11,9 +11,13 @@ academic = {
 	}
 
 	country_modifier = {
-        building_university_throughput_mult = 0.1
+        building_university_throughput_add = 0.1
         country_authority_mult = -0.1
 	}
+
+    agitator_modifier = {
+        country_academics_pol_str_mult = 0.05
+    }
 
     interest_group_modifier = {
         country_academics_pol_str_mult = 0.1
@@ -21,6 +25,7 @@ academic = {
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -112,12 +117,17 @@ banker = {
         country_minting_mult = 0.1
         state_radicals_from_sol_change_mult = 0.1
 	}
+
+    agitator_modifier = {
+    }
+
     interest_group_modifier = {
         interest_group_in_government_approval_add = 1
 	}
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -206,12 +216,17 @@ bureaucrat = {
         country_law_enactment_time_mult = 0.1
 	}
 
+    agitator_modifier = {
+        country_bureaucrats_pol_str_mult = 0.05
+    }
+
     interest_group_modifier = {
         country_bureaucrats_pol_str_mult = 0.1
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -309,8 +324,12 @@ clerk = {
 
 	country_modifier = {
         state_tax_capacity_mult = 0.1
-        building_railway_throughput_mult = -0.05
+        building_railway_throughput_add = -0.05
 	}
+
+    agitator_modifier = {
+        country_clerks_pol_str_mult = 0.05
+    }
 
     interest_group_modifier = {
         country_clerks_pol_str_mult = 0.1
@@ -318,6 +337,7 @@ clerk = {
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -419,12 +439,17 @@ doctor = {
         unit_kill_rate_add = -0.1
 	}
 
+    agitator_modifier = {
+        interest_group_pop_attraction_mult = 0.05
+    }
+
     interest_group_modifier = {
         interest_group_pop_attraction_mult = 0.1
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -504,9 +529,13 @@ inventor = {
 	}
 
 	country_modifier = {
-        building_construction_sector_throughput_mult = 0.1
+        building_construction_sector_throughput_add = 0.1
         country_institution_size_change_speed_mult = 0.2
 	}
+
+    agitator_modifier = {
+        country_engineers_pol_str_mult = 0.05
+    }
 
     interest_group_modifier = {
         country_engineers_pol_str_mult = 0.1
@@ -514,6 +543,7 @@ inventor = {
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -601,12 +631,17 @@ entrepreneur = {
         state_radicals_from_discrimination_mult = 0.05
 	}
 
+    agitator_modifier = {
+        interest_group_pol_str_mult = 0.05
+    }
+
     interest_group_modifier = {
         interest_group_pol_str_mult = 0.1
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
            owner = {  has_law = law_type:law_monarchy }
@@ -697,12 +732,17 @@ mill_owner = {
         tax_dividends_add = -0.025
 	}
 
+    agitator_modifier = {
+        country_capitalists_pol_str_mult = 0.05
+    }
+
     interest_group_modifier = {
         country_capitalists_pol_str_mult = 0.1
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -787,9 +827,13 @@ farmer = {
 	}
 
 	country_modifier = {
-        building_group_bg_agriculture_throughput_mult = 0.1
+        building_group_bg_agriculture_throughput_add = 0.1
         state_colony_growth_speed_mult = -0.1
 	}
+
+    agitator_modifier = {
+        country_farmers_pol_str_mult = 0.05
+    }
 
     interest_group_modifier = {
         country_farmers_pol_str_mult = 0.1
@@ -797,6 +841,7 @@ farmer = {
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -888,12 +933,17 @@ journalist = {
         country_infamy_generation_mult = 0.1
 	}
 
+    agitator_modifier = {
+        country_revolution_progress_mult = 0.05
+    }
+
     interest_group_modifier = {
         interest_group_in_opposition_approval_add = -2
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -980,9 +1030,13 @@ labourer = {
 	}
 
 	country_modifier = {
-        building_group_bg_manufacturing_throughput_mult = 0.1
+        building_group_bg_manufacturing_throughput_add = 0.1
         country_prestige_mult = -0.05
 	}
+
+    agitator_modifier = {
+        country_laborers_pol_str_mult = 0.05
+    }
 
     interest_group_modifier = {
         country_laborers_pol_str_mult = 0.1
@@ -990,6 +1044,7 @@ labourer = {
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1084,12 +1139,17 @@ lawyer = {
         country_bureaucracy_mult = -0.05
 	}
 
+    agitator_modifier = {
+        interest_group_pol_str_mult = 0.05
+    }
+
     interest_group_modifier = {
         interest_group_pol_str_mult = 0.1
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1186,13 +1246,17 @@ merchant = {
         state_tax_waste_add = 0.02
 	}
 
+    agitator_modifier = {
+        country_shopkeepers_pol_str_mult = 0.05
+    }
+
     interest_group_modifier = {
         country_shopkeepers_pol_str_mult = 0.1
     }
 
 	possible = {
         has_role = politician
-
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1292,6 +1356,11 @@ military_officer = {
         country_military_goods_cost_mult = 0.05
 	}
 
+    agitator_modifier = {
+        country_officers_pol_str_mult = 0.05
+        country_soldiers_pol_str_mult = 0.025
+    }
+
     interest_group_modifier = {
         country_officers_pol_str_mult = 0.1
         country_soldiers_pol_str_mult = 0.05
@@ -1299,6 +1368,7 @@ military_officer = {
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
@@ -1384,12 +1454,17 @@ landed_elite = {
         interest_group_ig_rural_folk_approval_add = -1
 	}
 
+    agitator_modifier = {
+        country_aristocrats_pol_str_mult = 0.05
+    }
+
     interest_group_modifier = {
         country_aristocrats_pol_str_mult = 0.1
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         interest_group = {
             is_interest_group_type = ig_landowners
 		}
@@ -1456,8 +1531,11 @@ police_chief = {
 
 	country_modifier = {
         state_turmoil_effects_mult = -0.1
-        country_decree_cost_mult = 0.1
+        state_decree_cost_mult = 0.1
 	}
+
+    agitator_modifier = {
+    }
 
     interest_group_modifier = {
         interest_group_approval_add = 1
@@ -1465,6 +1543,7 @@ police_chief = {
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1558,12 +1637,17 @@ political_dynasty = {
         country_opposition_ig_approval_add = -1
 	}
 
+    agitator_modifier = {
+        interest_group_pol_str_mult = 0.05
+    }
+
     interest_group_modifier = {
         interest_group_pol_str_mult = 0.15
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1658,12 +1742,17 @@ religious_leader = {
         country_tech_spread_mult = -0.1
 	}
 
+    agitator_modifier = {
+        country_clergymen_pol_str_mult = 0.05
+    }
+
     interest_group_modifier = {
         country_clergymen_pol_str_mult = 0.1
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1750,8 +1839,12 @@ soldier = {
 
 	country_modifier = {
         building_training_rate_mult = 0.1
-        country_navy_power_projection_mult = -0.05
+        country_prestige_from_navy_power_projection_mult = -0.05
 	}
+
+    agitator_modifier = {
+        political_movement_radicalism_mult = 0.1
+    }
 
     interest_group_modifier = {
         political_movement_radicalism_mult = 0.2
@@ -1759,6 +1852,7 @@ soldier = {
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1845,12 +1939,17 @@ teacher = {
         state_dependent_wage_mult = -0.1
 	}
 
+    agitator_modifier = {
+        interest_group_pop_attraction_mult = 0.05
+    }
+
     interest_group_modifier = {
         interest_group_pop_attraction_mult = 0.1
     }
 
 	possible = {
         has_role = politician
+        NOT = { has_role = general }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }

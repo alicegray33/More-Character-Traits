@@ -628,7 +628,7 @@ entrepreneur = {
 
 	country_modifier = {
         country_company_throughput_bonus_add = 0.1
-        state_lower_strata_expected_sol_add = 2
+        state_lower_strata_expected_sol_add = 1
 	}
 
     agitator_modifier = {

@@ -21,7 +21,7 @@ chess_master = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 	}
-	
+
 	country_modifier = {
 		country_law_enactment_time_mult = -0.1
         country_prestige_mult = 0.05
@@ -81,6 +81,10 @@ philanthropist = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.1
 	}
+
+	executive_modifier = {
+		building_working_conditions_mult = 0.1
+	}
 	
 	country_modifier = {
 		interest_group_ig_devout_approval_add = 1
@@ -139,6 +143,10 @@ artist = {
 	}
 
 	interest_group_modifier = {
+	}
+
+	executive_modifier = {
+		building_group_bg_arts_throughput_add = 0.1
 	}
 	
 	country_modifier = {

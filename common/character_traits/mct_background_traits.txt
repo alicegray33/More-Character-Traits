@@ -26,6 +26,7 @@ academic = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -54,7 +55,7 @@ academic = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -128,6 +129,7 @@ banker = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -165,7 +167,7 @@ banker = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -227,6 +229,7 @@ bureaucrat = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -260,7 +263,7 @@ bureaucrat = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -338,6 +341,7 @@ clerk = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -375,7 +379,7 @@ clerk = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -450,6 +454,7 @@ doctor = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -476,7 +481,7 @@ doctor = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -544,6 +549,7 @@ inventor = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -576,7 +582,7 @@ inventor = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -616,9 +622,9 @@ inventor = {
 	value = 1
 }
 
-entrepreneur = {
+publisher = {
 	type = skill
-	texture = "gfx/interface/icons/character_trait_icons/entrepreneur.dds"
+	texture = "gfx/interface/icons/character_trait_icons/publisher.dds"
 	
 	character_modifier = {
 	}
@@ -627,8 +633,8 @@ entrepreneur = {
 	}
 
 	country_modifier = {
-        country_company_throughput_bonus_add = 0.1
-        state_lower_strata_expected_sol_add = 1
+        country_loyalists_from_legitimacy_mult = 0.1
+        state_turmoil_effects_mult = 0.05
 	}
 
     agitator_modifier = {
@@ -642,6 +648,7 @@ entrepreneur = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
            owner = {  has_law = law_type:law_monarchy }
@@ -673,7 +680,7 @@ entrepreneur = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -743,6 +750,7 @@ mill_owner = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -780,7 +788,7 @@ mill_owner = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -842,6 +850,7 @@ farmer = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -869,7 +878,7 @@ farmer = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -944,6 +953,7 @@ journalist = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -977,7 +987,7 @@ journalist = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1045,6 +1055,7 @@ labourer = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1080,7 +1091,7 @@ labourer = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1150,6 +1161,7 @@ lawyer = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1170,7 +1182,7 @@ lawyer = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1242,7 +1254,7 @@ merchant = {
 	}
 
 	country_modifier = {
-        country_trade_route_quantity_mult = 0.1
+        building_trade_center_throughput_add = 0.1
         state_tax_waste_add = 0.02
 	}
 
@@ -1257,6 +1269,7 @@ merchant = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1288,7 +1301,7 @@ merchant = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1369,6 +1382,7 @@ military_officer = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_theocracy }
@@ -1395,7 +1409,7 @@ military_officer = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1465,6 +1479,7 @@ landed_elite = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         interest_group ?= {
             is_interest_group_type = ig_landowners
 		}
@@ -1483,7 +1498,7 @@ landed_elite = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1544,6 +1559,7 @@ police_chief = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1582,7 +1598,7 @@ police_chief = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1648,6 +1664,7 @@ political_dynasty = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1682,7 +1699,7 @@ political_dynasty = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1753,6 +1770,7 @@ religious_leader = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1776,7 +1794,7 @@ religious_leader = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1853,6 +1871,7 @@ soldier = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1888,7 +1907,7 @@ soldier = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist
@@ -1950,6 +1969,7 @@ teacher = {
 	possible = {
         has_role = politician
         NOT = { has_role = general }
+        NOT = { has_role = executive }
         NAND = {
             is_ruler = yes
             owner = { has_law = law_type:law_monarchy }
@@ -1989,7 +2009,7 @@ teacher = {
             has_trait = clerk
             has_trait = doctor
             has_trait = inventor
-            has_trait = entrepreneur
+            has_trait = publisher
             has_trait = mill_owner
             has_trait = farmer
             has_trait = journalist

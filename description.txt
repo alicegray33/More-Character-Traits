@@ -65,7 +65,7 @@ Also note, historical characters won't receive one of these backgrounds. It just
 	[*]Clerk
 	[*]Doctor
 	[*]Inventor (previously Engineer)
-	[*]Entrepreneur
+	[*]publisher
 	[*]Mill Owner
 	[*]Farmer
 	[*]Journalist

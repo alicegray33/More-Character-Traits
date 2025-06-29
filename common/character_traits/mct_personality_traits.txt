@@ -175,7 +175,11 @@ corrupt = {
 	
 	interest_group_modifier = {
 		interest_group_in_government_approval_add = 2
-	}				
+	}	
+
+	executive_modifier = {
+		building_nationalization_cost_mult = 0.1
+	}			
 	
 	possible = {
 		NOT = { age < define:NCharacters|ADULT_AGE }
@@ -299,7 +303,11 @@ greedy = {
 	
 	interest_group_modifier = {
         interest_group_pop_attraction_mult = -0.1
-	}				
+	}	
+
+	executive_modifier = {
+		building_minimum_wage_mult = -0.1
+	}			
 	
 	possible = {
 		NOT = { age < define:NCharacters|ADULT_AGE }
@@ -344,7 +352,11 @@ kind = {
 	interest_group_modifier = {
         interest_group_pop_attraction_mult = 0.1
 	}				
-	
+
+	executive_modifier = {
+		building_minimum_wage_mult = 0.1
+	}
+
 	possible = {
 		NOT = { age < define:NCharacters|ADULT_AGE }
 	}
@@ -461,7 +473,11 @@ wasteful = {
 	
 	interest_group_modifier = {
         interest_group_pop_attraction_mult = -0.1
-	}				
+	}			
+
+	executive_modifier = {
+		building_cash_reserves_mult = -0.1
+	}	
 	
 	possible = {
 		NOT = { age < define:NCharacters|ADULT_AGE }

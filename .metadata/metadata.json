@@ -1,8 +1,8 @@
 {
   "name" : "More Character Traits",
   "id" : "",
-  "version" : "1.8",
-  "supported_game_version" : "1.8.*",
+  "version" : "1.9",
+  "supported_game_version" : "1.9.*",
   "short_description" : "Adds more character traits to the game",
   "tags" : [],
   "relationships" : [],

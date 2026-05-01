@@ -6,6 +6,7 @@ REPLACE_OR_CREATE:chess_master = {
 
 	character_modifier = {
 		character_popularity_add = 20
+		character_prominence_add = 5
 	}
 
 	command_modifier = {
@@ -31,7 +32,7 @@ REPLACE_OR_CREATE:chess_master = {
 		NOT = {
 			has_trait = senile
 		}
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
 	}
 	
 	weight = {
@@ -69,6 +70,7 @@ REPLACE_OR_CREATE:philanthropist = {
 
 	character_modifier = {
 		character_popularity_add = 30
+		character_prominence_add = 5
 	}
 
 	command_modifier = {
@@ -96,7 +98,7 @@ REPLACE_OR_CREATE:philanthropist = {
 			has_trait = greedy
             has_trait = grifter
 		}
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
 	}
 	
 	weight = {
@@ -130,61 +132,62 @@ REPLACE_OR_CREATE:philanthropist = {
 	value = 2
 }
 
-REPLACE_OR_CREATE:artist = {
-	type = skill
-	texture = "gfx/interface/icons/character_trait_icons/artist.dds"
-
-	character_modifier = {
-		character_popularity_add = 25
-	}
-
-	command_modifier = {
-        character_battle_condition_good_visibility_mult = 0.5
-	}
-
-	interest_group_modifier = {
-	}
-
-	executive_modifier = {
-		building_group_bg_arts_throughput_add = 0.1
-	}
-	
-	country_modifier = {
-		country_prestige_add = 10
-	}
-
-	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
-	}
-	
-	weight = {
-		value = 5	# Same base as vanilla traits such as Bandit and Explorer
-        if = {
-			limit = {
-				OR = {
-					has_trait = opium_addiction
-                    has_trait = romantic
-                    has_trait = rambler
-                    has_trait = eccentric
-				}
-			}
-			multiply = 4
-		}
-		if = {
-			limit = {
-				OR = {
-					has_trait = reserved
-				}
-			}
-			divide = 3
-		}
-	}
-	
-	replace = {
-	}
-	
-	value = 2
-}
+## Removed as too similar to the new in-game Aesthete trait (introduced 1.13)
+# REPLACE_OR_CREATE:artist = {
+#  	type = skill
+# 	texture = "gfx/interface/icons/character_trait_icons/artist.dds"
+# 
+# 	character_modifier = {
+# 		character_popularity_add = 25
+# 	}
+# 
+# 	command_modifier = {
+#         character_battle_condition_good_visibility_mult = 0.5
+# 	}
+# 
+# 	interest_group_modifier = {
+# 	}
+# 
+# 	executive_modifier = {
+# 		building_group_bg_arts_throughput_add = 0.1
+# 	}
+# 	
+# 	country_modifier = {
+# 		country_prestige_add = 10
+# 	}
+# 
+# 	possible = {
+# 		is_adult = yes
+# 	}
+# 	
+# 	weight = {
+# 		value = 5	# Same base as vanilla traits such as Bandit and Explorer
+#         if = {
+# 			limit = {
+# 				OR = {
+# 					has_trait = opium_addiction
+#                     has_trait = romantic
+#                     has_trait = rambler
+#                     has_trait = eccentric
+# 				}
+# 			}
+# 			multiply = 4
+# 		}
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					has_trait = reserved
+# 				}
+# 			}
+# 			divide = 3
+# 		}
+# 	}
+# 	
+# 	replace = {
+# 	}
+# 	
+# 	value = 2
+# }
 
 REPLACE_OR_CREATE:well_travelled = {
 	type = skill
@@ -213,7 +216,7 @@ REPLACE_OR_CREATE:well_travelled = {
 			has_trait = senile
             has_trait = cancer
 		}
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
 	}
 	
 	weight = {

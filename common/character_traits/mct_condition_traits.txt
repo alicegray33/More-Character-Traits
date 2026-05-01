@@ -176,7 +176,7 @@ REPLACE_OR_CREATE:swimmer = {
         if = {
 			limit = {
                 OR = {
-					has_role = admiral
+					has_role_of_type = admiral
 				}
 			}
 			multiply = 3
@@ -232,8 +232,8 @@ REPLACE_OR_CREATE:fencer = {
         if = {
 			limit = {
                 OR = {
-					has_role = admiral
-                    has_role = general
+					has_role_of_type = admiral
+                    has_role_of_type = general
                     has_trait = military_officer
 				}
 			}

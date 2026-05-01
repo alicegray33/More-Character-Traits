@@ -7,6 +7,7 @@ REPLACE_OR_CREATE:absent_minded = {
 	character_modifier = {
         character_health_add = -0.1
 		character_popularity_add = 15
+		character_prominence_add = -5
 	}
 
 	command_modifier = {
@@ -23,14 +24,15 @@ REPLACE_OR_CREATE:absent_minded = {
 	}				
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
+		NOT = { has_trait = ruthless }
 	}
-	
+		
 	weight = {
 		value = 1
 		if = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 			}
 			multiply = 0.5
 		}
@@ -64,8 +66,8 @@ REPLACE_OR_CREATE:appeaser = {
 	}				
 	
 	possible = {
-		NOT = { has_role = agitator }
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		NOT = { has_role_of_type = agitator }
+		is_adult = yes
 	}
 	
 	weight = 1
@@ -82,6 +84,7 @@ REPLACE_OR_CREATE:arbitrary = {
 	
 	character_modifier = {
 		character_popularity_add = -10
+		character_prominence_add = -5
 	}
 
 	command_modifier = {
@@ -98,8 +101,9 @@ REPLACE_OR_CREATE:arbitrary = {
 	}				
 	
 	possible = {
-		NOT = { has_role = agitator }
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		NOT = { has_role_of_type = agitator }
+		is_adult = yes
+		NOT = { has_trait = compliant }
 	}
 	
 	weight = 1
@@ -133,14 +137,14 @@ REPLACE_OR_CREATE:calm = {
 	}				
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
 	}
 	
 	weight = {
 		value = 1
 		if = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 			}
 			multiply = 0.4
 		}
@@ -158,6 +162,7 @@ REPLACE_OR_CREATE:corrupt = {
 	
 	character_modifier = {
 		character_popularity_add = -30
+		character_prominence_add = -5
 	}
 
 	command_modifier = {
@@ -182,7 +187,8 @@ REPLACE_OR_CREATE:corrupt = {
 	}			
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
+		NOT = { has_trait = compliant }
 	}
 	
 	weight = 1
@@ -213,14 +219,15 @@ REPLACE_OR_CREATE:deceitful = {
 	}				
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
+		NOT = { has_trait = compliant }
 	}
 	
 	weight = {
 		value = 1
 		if = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 			}
 			multiply = 0.75
 		}
@@ -238,6 +245,7 @@ REPLACE_OR_CREATE:eccentric = {
 	
 	character_modifier = {
 		character_popularity_add = -20
+		character_prominence_add = -5
 	}
 
 	command_modifier = {
@@ -261,14 +269,14 @@ REPLACE_OR_CREATE:eccentric = {
 	}				
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
 	}
 	
 	weight = {
 		value = 1
 		if = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 			}
 			multiply = 1.5
 		}
@@ -310,14 +318,14 @@ REPLACE_OR_CREATE:greedy = {
 	}			
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
 	}
 	
 	weight = {
 		value = 1
 		if = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 			}
 			multiply = 0.5
 		}
@@ -358,14 +366,15 @@ REPLACE_OR_CREATE:kind = {
 	}
 
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
+		NOT = { has_trait = ruthless }
 	}
 	
 	weight = {
 		value = 1
 		if = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 			}
 			multiply = 0.8
 		}
@@ -398,14 +407,15 @@ REPLACE_OR_CREATE:tough = {
 	}				
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
+		NOT = { has_trait = compliant }
 	}
 	
 	weight = {
 		value = 1
 		if = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 			}
 			multiply = 1.5
 		}
@@ -423,6 +433,7 @@ REPLACE_OR_CREATE:uncouth = {
 	
 	character_modifier = {
 		character_popularity_add = -15
+		character_prominence_add = -10
 	}
 
 	command_modifier = {
@@ -444,7 +455,7 @@ REPLACE_OR_CREATE:uncouth = {
 	}				
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
 	}
 	
 	weight = 1
@@ -480,7 +491,7 @@ REPLACE_OR_CREATE:wasteful = {
 	}	
 	
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
+		is_adult = yes
 	}
 	
 	weight = 1

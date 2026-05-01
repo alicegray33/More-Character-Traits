@@ -5,6 +5,7 @@ REPLACE_OR_CREATE:academic = {
 	texture = "gfx/interface/icons/character_trait_icons/academic.dds"
 	
 	character_modifier = {
+        character_prominence_add = 5
 	}
 	
 	command_modifier = {
@@ -24,16 +25,17 @@ REPLACE_OR_CREATE:academic = {
 	}
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         interest_group ?= {
 			OR = {
@@ -71,6 +73,7 @@ REPLACE_OR_CREATE:academic = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -109,6 +112,7 @@ REPLACE_OR_CREATE:banker = {
 	
 	character_modifier = {
         character_popularity_add = -10
+        character_prominence_add = 5
 	}
 	
 	command_modifier = {
@@ -127,30 +131,31 @@ REPLACE_OR_CREATE:banker = {
 	}
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NOT = {
-            owner = { has_law = law_type:law_council_republic }
+            owner = { has_law_or_variant = law_type:law_council_republic }
         }
         NOT = {
-            owner = { has_law = law_type:law_command_economy }
+            owner = { has_law_or_variant = law_type:law_command_economy }
         }
         interest_group ?= {
 				is_interest_group_type = ig_industrialists
@@ -183,6 +188,7 @@ REPLACE_OR_CREATE:banker = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -227,24 +233,25 @@ REPLACE_OR_CREATE:bureaucrat = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         interest_group ?= {
 			OR = {
@@ -279,6 +286,7 @@ REPLACE_OR_CREATE:bureaucrat = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -301,7 +309,7 @@ REPLACE_OR_CREATE:bureaucrat = {
                     interest_group ?= {
                         is_interest_group_type = ig_landowners
                     }
-                    owner = { has_law = law_type:law_hereditary_bureaucrats }
+                    owner = { has_law_or_variant = law_type:law_hereditary_bureaucrats }
                 }
 			}
             
@@ -320,6 +328,7 @@ REPLACE_OR_CREATE:clerk = {
 	texture = "gfx/interface/icons/character_trait_icons/clerk.dds"
 	
 	character_modifier = {
+        character_prominence_add = -5
 	}
 	
 	command_modifier = {
@@ -339,24 +348,27 @@ REPLACE_OR_CREATE:clerk = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+            has_role_of_type = executive
+            has_role_of_type = magnate
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         interest_group ?= {
 			OR = {
@@ -395,6 +407,7 @@ REPLACE_OR_CREATE:clerk = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -452,16 +465,17 @@ REPLACE_OR_CREATE:doctor = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         interest_group ?= {
 			OR = {
@@ -497,6 +511,7 @@ REPLACE_OR_CREATE:doctor = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -547,24 +562,25 @@ REPLACE_OR_CREATE:inventor = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         interest_group ?= {
 			OR = {
@@ -598,6 +614,7 @@ REPLACE_OR_CREATE:inventor = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -627,6 +644,7 @@ REPLACE_OR_CREATE:publisher = {
 	texture = "gfx/interface/icons/character_trait_icons/publisher.dds"
 	
 	character_modifier = {
+        character_prominence_add = 5
 	}
 	
 	command_modifier = {
@@ -646,24 +664,25 @@ REPLACE_OR_CREATE:publisher = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-           owner = {  has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+           owner = {  has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         interest_group ?= {
 			OR = {
@@ -696,6 +715,7 @@ REPLACE_OR_CREATE:publisher = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -729,6 +749,7 @@ REPLACE_OR_CREATE:mill_owner = {
 	texture = "gfx/interface/icons/character_trait_icons/mill_owner.dds"
 	
 	character_modifier = {
+        character_prominence_add = 5
 	}
 	
 	command_modifier = {
@@ -748,30 +769,31 @@ REPLACE_OR_CREATE:mill_owner = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         NOT = {
-            owner = { has_law = law_type:law_council_republic }
+            owner = { has_law_or_variant = law_type:law_council_republic }
         }
         NOT = {
-            owner = { has_law = law_type:law_command_economy }
+            owner = { has_law_or_variant = law_type:law_command_economy }
         }
         interest_group ?= {
             is_interest_group_type = ig_industrialists
@@ -804,6 +826,7 @@ REPLACE_OR_CREATE:mill_owner = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -829,6 +852,7 @@ REPLACE_OR_CREATE:farmer = {
 	texture = "gfx/interface/icons/character_trait_icons/farmer.dds"
 	
 	character_modifier = {
+        character_prominence_add = -5
 	}
 	
 	command_modifier = {
@@ -848,16 +872,18 @@ REPLACE_OR_CREATE:farmer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+            has_role_of_type = executive
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         interest_group ?= {
 			OR = {
@@ -894,6 +920,7 @@ REPLACE_OR_CREATE:farmer = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -912,9 +939,9 @@ REPLACE_OR_CREATE:farmer = {
                     is_interest_group_type = ig_landowners
                 }
                 OR = {
-                    owner = { has_law = law_type:law_anarchy }
-                    owner = { has_law = law_type:law_command_economy }
-                    owner = { has_law = law_type:law_council_republic }
+                    owner = { has_law_or_variant = law_type:law_anarchy }
+                    owner = { has_law_or_variant = law_type:law_command_economy }
+                    owner = { has_law_or_variant = law_type:law_council_republic }
                 }
             }
 			add = 430
@@ -932,6 +959,7 @@ REPLACE_OR_CREATE:journalist = {
 	texture = "gfx/interface/icons/character_trait_icons/journalist.dds"
 	
 	character_modifier = {
+        character_prominence_add = 5
 	}
 	
 	command_modifier = {
@@ -951,24 +979,25 @@ REPLACE_OR_CREATE:journalist = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         interest_group ?= {
 			OR = {
@@ -1003,6 +1032,7 @@ REPLACE_OR_CREATE:journalist = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1037,6 +1067,7 @@ REPLACE_OR_CREATE:labourer = {
 	}
 	
 	command_modifier = {
+        character_prominence_add = -5
 	}
 
 	country_modifier = {
@@ -1053,24 +1084,27 @@ REPLACE_OR_CREATE:labourer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+         NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+            has_role_of_type = executive
+            has_role_of_type = magnate
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         interest_group ?= {
 			OR = {
@@ -1107,6 +1141,7 @@ REPLACE_OR_CREATE:labourer = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1140,6 +1175,7 @@ REPLACE_OR_CREATE:lawyer = {
 	texture = "gfx/interface/icons/character_trait_icons/lawyer.dds"
 	
 	character_modifier = {
+        character_prominence_add = 5
 	}
 	
 	command_modifier = {
@@ -1159,19 +1195,20 @@ REPLACE_OR_CREATE:lawyer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NOT = {
-            owner = { has_law = law_type:law_anarchy }
+            owner = { has_law_or_variant = law_type:law_anarchy }
         }
         NOT = { has_variable = has_historical_traits }
         NOT = { has_variable = david_copperfield_var }
@@ -1198,6 +1235,7 @@ REPLACE_OR_CREATE:lawyer = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1248,6 +1286,7 @@ REPLACE_OR_CREATE:merchant = {
 	texture = "gfx/interface/icons/character_trait_icons/merchant.dds"
 	
 	character_modifier = {
+        character_prominence_add = 5
 	}
 	
 	command_modifier = {
@@ -1267,24 +1306,25 @@ REPLACE_OR_CREATE:merchant = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         } 
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         interest_group ?= {
 			OR = {
@@ -1317,6 +1357,7 @@ REPLACE_OR_CREATE:merchant = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1359,6 +1400,7 @@ REPLACE_OR_CREATE:military_officer = {
 	texture = "gfx/interface/icons/character_trait_icons/military_officer.dds"
 	
 	character_modifier = {
+        character_prominence_add = 10
 	}
 	
 	command_modifier = {
@@ -1380,16 +1422,17 @@ REPLACE_OR_CREATE:military_officer = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         interest_group ?= {
 			OR = {
@@ -1425,6 +1468,7 @@ REPLACE_OR_CREATE:military_officer = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1458,6 +1502,7 @@ REPLACE_OR_CREATE:landed_elite = {
 	texture = "gfx/interface/icons/character_trait_icons/landed_elite.dds"
 	
 	character_modifier = {
+        character_prominence_add = 5
 	}
 	
 	command_modifier = {
@@ -1477,17 +1522,18 @@ REPLACE_OR_CREATE:landed_elite = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         interest_group ?= {
             is_interest_group_type = ig_landowners
 		}
         NOT = {
-            owner = { has_law = law_type:law_council_republic }
+            owner = { has_law_or_variant = law_type:law_council_republic }
         }
         NOT = {
-            owner = { has_law = law_type:law_command_economy }
+            owner = { has_law_or_variant = law_type:law_command_economy }
         }
         NOT = { has_variable = has_historical_traits }
         NOT = { has_variable = david_copperfield_var }
@@ -1514,6 +1560,7 @@ REPLACE_OR_CREATE:landed_elite = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1557,27 +1604,28 @@ REPLACE_OR_CREATE:police_chief = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         NOT = {
-            owner = { has_law = law_type:law_no_police }
+            owner = { has_law_or_variant = law_type:law_no_police }
         }
         interest_group ?= {
 			OR = {
@@ -1614,6 +1662,7 @@ REPLACE_OR_CREATE:police_chief = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1643,6 +1692,7 @@ REPLACE_OR_CREATE:political_dynasty = {
 	
 	character_modifier = {
         character_popularity_add = 10
+        character_prominence_add = 10
 	}
 	
 	command_modifier = {
@@ -1662,27 +1712,28 @@ REPLACE_OR_CREATE:political_dynasty = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         NOT = {
-            owner = { has_law = law_type:law_anarchy }
+            owner = { has_law_or_variant = law_type:law_anarchy }
         }
         interest_group ?= {
 			OR = {
@@ -1715,6 +1766,7 @@ REPLACE_OR_CREATE:political_dynasty = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1749,6 +1801,7 @@ REPLACE_OR_CREATE:religious_leader = {
 	
 	character_modifier = {
         character_popularity_add = 10
+        character_prominence_add = 10
 	}
 	
 	command_modifier = {
@@ -1768,16 +1821,19 @@ REPLACE_OR_CREATE:religious_leader = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+            has_role_of_type = executive
+            has_role_of_type = magnate
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         interest_group ?= {
 			OR = {
@@ -1810,6 +1866,7 @@ REPLACE_OR_CREATE:religious_leader = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {
@@ -1832,7 +1889,7 @@ REPLACE_OR_CREATE:religious_leader = {
 		}
         if = {
             limit = {
-                owner = { has_law = law_type:law_theocracy }
+                owner = { has_law_or_variant = law_type:law_theocracy }
             }
             add = 410
         }
@@ -1869,27 +1926,30 @@ REPLACE_OR_CREATE:soldier = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+            has_role_of_type = executive
+            has_role_of_type = magnate
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         NOT = {
-            owner = { has_law = law_type:law_peasant_levies }
+            owner = { has_law_or_variant = law_type:law_peasant_levies }
         }
         interest_group ?= {
             is_interest_group_type = ig_armed_forces
@@ -1967,27 +2027,30 @@ REPLACE_OR_CREATE:teacher = {
     }
 
 	possible = {
-        has_role = politician
-        NOT = { has_role = general }
-        NOT = { has_role = executive }
+        NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+            has_role_of_type = executive
+            has_role_of_type = magnate
+		}
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law = law_type:law_monarchy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant = law_type:law_monarchy }
         }
         NAND = {
-            is_ruler = yes
-            owner = { has_law = law_type:law_theocracy }
+            has_role_of_type = ruler
+            owner = { has_law_or_variant = law_type:law_theocracy }
         }
         NAND = {
-            is_heir = yes
-            owner = { has_law =law_type:law_theocracy }
+            has_role_of_type = heir
+            owner = { has_law_or_variant =law_type:law_theocracy }
         }
         NOT = {
-            owner = { has_law = law_type:law_no_schools }
+            owner = { has_law_or_variant = law_type:law_no_schools }
         }
         interest_group ?= {
 			OR = {
@@ -2025,6 +2088,7 @@ REPLACE_OR_CREATE:teacher = {
             has_trait = teacher
         }
         age > define:NPortrait|GRACEFUL_AGING_START
+        owner = { NOT = { is_country_type = decentralized } }
 	}
 	
 	weight = {

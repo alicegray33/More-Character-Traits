@@ -1,4 +1,11 @@
-[h2] Updated for 1.8 [/h2]
+[h2] Updated for 1.10[/h2]
+[list]
+  [*] 'Background: Entrepreneur' has been removed and replaced with 'Background: Publisher' - this is due to the addition of the Entrepreneur skill levels in the base game
+  [*] Some traits have extra modifiers for the new executive character types
+  [*] Executives will not get any of the 'Background' type traits as they automatically get the Entrepreneur skill levels (in the same way how Generals/Admirals don't get 'Background' type skills)
+[/list]
+
+[h2] Description[/h2]
 
 This mod adds 41 new character traits to the game. This creates a greater diversity of characters, and adds more flavour to the game.
 
@@ -65,7 +72,7 @@ Also note, historical characters won't receive one of these backgrounds. It just
 	[*]Clerk
 	[*]Doctor
 	[*]Inventor (previously Engineer)
-	[*]publisher
+	[*]Publisher (previously Entrepreneur)
 	[*]Mill Owner
 	[*]Farmer
 	[*]Journalist

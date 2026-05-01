@@ -1,6 +1,6 @@
 ﻿### More Character Traits - Personality
 
-chess_master = {
+REPLACE_OR_CREATE:chess_master = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/chess_master.dds"
 
@@ -63,7 +63,7 @@ chess_master = {
 	value = 2
 }
 
-philanthropist = {
+REPLACE_OR_CREATE:philanthropist = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/philanthropist.dds"
 
@@ -83,7 +83,7 @@ philanthropist = {
 	}
 
 	executive_modifier = {
-		building_working_conditions_mult = 0.1
+		building_working_conditions_mult = -0.1
 	}
 	
 	country_modifier = {
@@ -130,7 +130,7 @@ philanthropist = {
 	value = 2
 }
 
-artist = {
+REPLACE_OR_CREATE:artist = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/artist.dds"
 
@@ -186,7 +186,7 @@ artist = {
 	value = 2
 }
 
-well_travelled = {
+REPLACE_OR_CREATE:well_travelled = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/well_travelled.dds"
 

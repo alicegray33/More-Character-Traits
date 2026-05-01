@@ -1,6 +1,6 @@
 ﻿### More Character Traits - Conditions
 
-rambler = {
+REPLACE_OR_CREATE:rambler = {
 	type = condition
 	texture = "gfx/interface/icons/character_trait_icons/rambler.dds"
 	
@@ -45,7 +45,7 @@ rambler = {
 	}
 }
 
-hunter = {
+REPLACE_OR_CREATE:hunter = {
 	type = condition
 	texture = "gfx/interface/icons/character_trait_icons/hunter.dds"
 	
@@ -94,7 +94,7 @@ hunter = {
 	}
 }
 
-horse_rider = {
+REPLACE_OR_CREATE:horse_rider = {
 	type = condition
 	texture = "gfx/interface/icons/character_trait_icons/horse_rider.dds"
 	
@@ -142,7 +142,7 @@ horse_rider = {
 	}
 }
 
-swimmer = {
+REPLACE_OR_CREATE:swimmer = {
 	type = condition
 	texture = "gfx/interface/icons/character_trait_icons/swimmer.dds"
 	
@@ -187,7 +187,7 @@ swimmer = {
 	}
 }
 
-fencer = {
+REPLACE_OR_CREATE:fencer = {
 	type = condition
 	texture = "gfx/interface/icons/character_trait_icons/fencer.dds"
 	

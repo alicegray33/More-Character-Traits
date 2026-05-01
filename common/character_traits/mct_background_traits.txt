@@ -1,6 +1,6 @@
 ﻿### More Character Traits - Background (Currently treated as a skill for politicians only)
 
-academic = {
+REPLACE_OR_CREATE:academic = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/academic.dds"
 	
@@ -103,7 +103,7 @@ academic = {
 	value = 1
 }
 
-banker = {
+REPLACE_OR_CREATE:banker = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/banker.dds"
 	
@@ -203,7 +203,7 @@ banker = {
 	value = 1
 }
 
-bureaucrat = {
+REPLACE_OR_CREATE:bureaucrat = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/bureaucrat.dds"
 	
@@ -315,7 +315,7 @@ bureaucrat = {
 	value = 1
 }
 
-clerk = {
+REPLACE_OR_CREATE:clerk = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/clerk.dds"
 	
@@ -427,7 +427,7 @@ clerk = {
 	value = 1
 }
 
-doctor = {
+REPLACE_OR_CREATE:doctor = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/doctor.dds"
 	
@@ -523,7 +523,7 @@ doctor = {
 	value = 1
 }
 
-inventor = {
+REPLACE_OR_CREATE:inventor = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/inventor.dds"
 	
@@ -622,7 +622,7 @@ inventor = {
 	value = 1
 }
 
-publisher = {
+REPLACE_OR_CREATE:publisher = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/publisher.dds"
 	
@@ -724,7 +724,7 @@ publisher = {
 	value = 1
 }
 
-mill_owner = {
+REPLACE_OR_CREATE:mill_owner = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/mill_owner.dds"
 	
@@ -824,7 +824,7 @@ mill_owner = {
 	value = 1
 }
 
-farmer = {
+REPLACE_OR_CREATE:farmer = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/farmer.dds"
 	
@@ -927,7 +927,7 @@ farmer = {
 	value = 1
 }
 
-journalist = {
+REPLACE_OR_CREATE:journalist = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/journalist.dds"
 	
@@ -1028,7 +1028,7 @@ journalist = {
 	value = 1
 }
 
-labourer = {
+REPLACE_OR_CREATE:labourer = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/labourer.dds"
 	
@@ -1135,7 +1135,7 @@ labourer = {
 	value = 1
 }
 
-lawyer = {
+REPLACE_OR_CREATE:lawyer = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/lawyer.dds"
 	
@@ -1243,7 +1243,7 @@ lawyer = {
 	value = 1
 }
 
-merchant = {
+REPLACE_OR_CREATE:merchant = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/merchant.dds"
 	
@@ -1354,7 +1354,7 @@ merchant = {
 	value = 1
 }
 
-military_officer = {
+REPLACE_OR_CREATE:military_officer = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/military_officer.dds"
 	
@@ -1453,7 +1453,7 @@ military_officer = {
 	value = 1
 }
 
-landed_elite = {
+REPLACE_OR_CREATE:landed_elite = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/landed_elite.dds"
 	
@@ -1534,7 +1534,7 @@ landed_elite = {
 	value = 1
 }
 
-police_chief = {
+REPLACE_OR_CREATE:police_chief = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/police_chief.dds"
 	
@@ -1637,7 +1637,7 @@ police_chief = {
 	value = 1
 }
 
-political_dynasty = {
+REPLACE_OR_CREATE:political_dynasty = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/political_dynasty.dds"
 	
@@ -1743,7 +1743,7 @@ political_dynasty = {
 	value = 1
 }
 
-religious_leader = {
+REPLACE_OR_CREATE:religious_leader = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/religious_leader.dds"
 	
@@ -1844,7 +1844,7 @@ religious_leader = {
 	value = 1
 }
 
-soldier = {
+REPLACE_OR_CREATE:soldier = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/soldier.dds"
 	
@@ -1943,7 +1943,7 @@ soldier = {
 	value = 1
 }
 
-teacher = {
+REPLACE_OR_CREATE:teacher = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/teacher.dds"
 	

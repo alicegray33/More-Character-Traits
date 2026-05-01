@@ -1,6 +1,6 @@
 ﻿### More Character Traits - Personality
 
-absent_minded = {
+REPLACE_OR_CREATE:absent_minded = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/absent_minded.dds"
 	
@@ -42,7 +42,7 @@ absent_minded = {
 	value = 3
 }
 
-appeaser = {
+REPLACE_OR_CREATE:appeaser = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/appeaser.dds"
 	
@@ -76,7 +76,7 @@ appeaser = {
 	value = 3
 }
 
-arbitrary = {
+REPLACE_OR_CREATE:arbitrary = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/arbitrary.dds"
 	
@@ -110,7 +110,7 @@ arbitrary = {
 	value = 3
 }
 
-calm = {
+REPLACE_OR_CREATE:calm = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/calm.dds"
 	
@@ -152,7 +152,7 @@ calm = {
 	value = 3
 }
 
-corrupt = {
+REPLACE_OR_CREATE:corrupt = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/corrupt.dds"
 	
@@ -193,7 +193,7 @@ corrupt = {
 	value = 3
 }
 
-deceitful = {
+REPLACE_OR_CREATE:deceitful = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/deceitful.dds"
 	
@@ -232,7 +232,7 @@ deceitful = {
 	value = 3
 }
 
-eccentric = {
+REPLACE_OR_CREATE:eccentric = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/eccentric.dds"
 	
@@ -280,7 +280,7 @@ eccentric = {
 	value = 3
 }
 
-greedy = {
+REPLACE_OR_CREATE:greedy = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/greedy.dds"
 	
@@ -329,7 +329,7 @@ greedy = {
 	value = 3
 }
 
-kind = {
+REPLACE_OR_CREATE:kind = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/kind.dds"
 	
@@ -377,7 +377,7 @@ kind = {
 	value = 3
 }
 
-tough = {
+REPLACE_OR_CREATE:tough = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/tough.dds"
 	
@@ -417,7 +417,7 @@ tough = {
 	value = 3
 }
 
-uncouth = {
+REPLACE_OR_CREATE:uncouth = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/uncouth.dds"
 	
@@ -455,7 +455,7 @@ uncouth = {
 	value = 3
 }
 
-wasteful = {
+REPLACE_OR_CREATE:wasteful = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/wasteful.dds"
 	
